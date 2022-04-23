@@ -12,7 +12,7 @@ function App() {
       <header>
         <Navbar />
       </header>
-      <main className="container mx-auto w-11/12 px-6">
+      <main className="scroll-smooth">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />

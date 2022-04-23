@@ -2,7 +2,8 @@
   font-family: Rubik, sans-serif;
 }
 
-h1 span {
+h1 span,
+h2 span {
   font-family: Oswald, sans-serif;
   font-weight: bold;
 }
@@ -79,4 +80,30 @@ body {
   100% {
     background-position: 25% 0%;
   }
+}
+
+.intro-pics {
+  /* background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 0) 67%
+  ); */
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0) 60%
+  );
+}
+
+.introduce {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6951155462184874) 26%,
+    rgba(0, 0, 0, 0.6951155462184874) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
