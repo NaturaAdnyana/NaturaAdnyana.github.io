@@ -31,67 +31,67 @@ function SkillsToolsSection() {
             </h2>
           </div>
           <div className="grid grid-cols-5 gap-6">
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
               <HtmlIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
               <CssIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
               <JsIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <PhpIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <SassIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <BootstrapIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
               <TailwindCssIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
               <ReactIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <ReduxIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <LaravelIcon className="w-full" />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
               <VSCodeIcon />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <GitIcon />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <FigmaIcon />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <PhotoshopIcon />
             </div>
-            <div className="p-10 rounded-md backdrop-brightness-200 shadow-inner relative overflow-hidden">
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <IllustratorIcon />
             </div>
           </div>
