@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/NaturaAdnyana/NaturaAdnyana.github.io/static/css/main.746da339.css",
+    "main.js": "/NaturaAdnyana/NaturaAdnyana.github.io/static/js/main.d82a0a9e.js",
+    "static/media/noise2.jpg": "/NaturaAdnyana/NaturaAdnyana.github.io/static/media/noise2.5a98f9df94a85ea5e51c.jpg",
+    "index.html": "/NaturaAdnyana/NaturaAdnyana.github.io/index.html",
+    "main.746da339.css.map": "/NaturaAdnyana/NaturaAdnyana.github.io/static/css/main.746da339.css.map",
+    "main.d82a0a9e.js.map": "/NaturaAdnyana/NaturaAdnyana.github.io/static/js/main.d82a0a9e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.746da339.css",
+    "static/js/main.d82a0a9e.js"
+  ]
+}
