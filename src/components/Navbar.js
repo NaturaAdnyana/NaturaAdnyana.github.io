@@ -20,10 +20,10 @@ function Navbar() {
           <Link to="/blogs">Blogs</Link>
         </li>
         <li>
-          <Link to="/certifications">Certification</Link>
+          <Link to="/certifications">Certifications</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
       <a href="#intro" className="absolute bottom-10 opacity-70 animate-bounce">
