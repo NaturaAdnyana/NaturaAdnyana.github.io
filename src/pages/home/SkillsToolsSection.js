@@ -19,6 +19,7 @@ import IllustratorIcon from "../../assets/icons/IllustratorIcon";
 function SkillsToolsSection() {
   return (
     <>
+      {/* Success is when you finally can say you bored with your things */}
       <section className="text-white bg-shadow">
         <article className="pr-16 container mx-auto w-11/12 px-6 py-32">
           <div className="pt-2 pb-10">

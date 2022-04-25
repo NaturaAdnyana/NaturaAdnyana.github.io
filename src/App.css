@@ -11,7 +11,7 @@ h2 span {
 body {
   margin: 0;
   padding: 0;
-  background: url("./assets/images/noise2.jpg");
+  background: url("./assets/images/noise.webp");
   animation: animate 0.5s steps(10) infinite;
 }
 
@@ -82,7 +82,7 @@ body {
   }
 }
 
-.intro-pics {
+.bg-circle-shadow {
   /* background: rgb(0, 0, 0);
   background: radial-gradient(
     circle,
@@ -112,11 +112,9 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.lamp-light {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0) 95%
-  );
+.bg-footer {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20% 20% 0 0;
+  box-shadow: 0 -5px 10px 5px rgba(255, 255, 255, 0.03),
+    inset 0 5px 10px 8px rgba(255, 255, 255, 0.05);
 }

@@ -4,13 +4,15 @@ import IntroSection from "./IntroSection";
 import InterestSection from "./InterestSection";
 import SkillsToolsSection from "./SkillsToolsSection";
 
+// User laptop/desktop for better experience
+
 function Home() {
   return (
     <>
       <section className="text-white container mx-auto w-11/12 px-6">
         <article className="h-screen pr-20">
           <div className="flex justify-between h-screen space-x-9">
-            <div className="relative w-full flex justify-center items-center intro-pics">
+            <div className="relative w-full flex justify-center items-center bg-circle-shadow">
               <motion.img
                 drag
                 dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
