@@ -1,20 +1,30 @@
-import React from "react";
+import React, { Suspense } from "react";
 
-import HtmlIcon from "../../assets/icons/HtmlIcon";
-import CssIcon from "../../assets/icons/CssIcon";
-import JsIcon from "../../assets/icons/JsIcon";
-import ReactIcon from "../../assets/icons/ReactIcon";
-import SassIcon from "../../assets/icons/SassIcon";
-import BootstrapIcon from "../../assets/icons/BootstrapIcon";
-import TailwindCssIcon from "../../assets/icons/TailwindCssIcon";
-import ReduxIcon from "../../assets/icons/ReduxIcon";
-import LaravelIcon from "../../assets/icons/LaravelIcon";
-import PhpIcon from "../../assets/icons/PhpIcon";
-import VSCodeIcon from "../../assets/icons/VSCodeIcon";
-import GitIcon from "../../assets/icons/GitIcon";
-import FigmaIcon from "../../assets/icons/FigmaIcon";
-import PhotoshopIcon from "../../assets/icons/PhotoshopIcon";
-import IllustratorIcon from "../../assets/icons/IllustratorIcon";
+import ImgLazyLoading from "../../components/ImgLazyLoading";
+
+const HtmlIcon = React.lazy(() => import("../../assets/icons/HtmlIcon"));
+const CssIcon = React.lazy(() => import("../../assets/icons/CssIcon"));
+const JsIcon = React.lazy(() => import("../../assets/icons/JsIcon"));
+const ReactIcon = React.lazy(() => import("../../assets/icons/ReactIcon"));
+const SassIcon = React.lazy(() => import("../../assets/icons/SassIcon"));
+const BootstrapIcon = React.lazy(() =>
+  import("../../assets/icons/BootstrapIcon")
+);
+const TailwindCssIcon = React.lazy(() =>
+  import("../../assets/icons/TailwindCssIcon")
+);
+const ReduxIcon = React.lazy(() => import("../../assets/icons/ReduxIcon"));
+const LaravelIcon = React.lazy(() => import("../../assets/icons/LaravelIcon"));
+const PhpIcon = React.lazy(() => import("../../assets/icons/PhpIcon"));
+const VSCodeIcon = React.lazy(() => import("../../assets/icons/VSCodeIcon"));
+const GitIcon = React.lazy(() => import("../../assets/icons/GitIcon"));
+const FigmaIcon = React.lazy(() => import("../../assets/icons/FigmaIcon"));
+const PhotoshopIcon = React.lazy(() =>
+  import("../../assets/icons/PhotoshopIcon")
+);
+const IllustratorIcon = React.lazy(() =>
+  import("../../assets/icons/IllustratorIcon")
+);
 
 function SkillsToolsSection() {
   return (
@@ -36,64 +46,94 @@ function SkillsToolsSection() {
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
-              <HtmlIcon className="w-full" />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <HtmlIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
-              <CssIcon className="w-full" />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <CssIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
-              <JsIcon className="w-full" />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <JsIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <PhpIcon className="w-full" />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <PhpIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <SassIcon className="w-full" />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <SassIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <BootstrapIcon className="w-full" />
-            </div>
-            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
-                <span className="font-bold">Fav</span>
-              </div>
-              <TailwindCssIcon className="w-full" />
-            </div>
-            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
-                <span className="font-bold">Fav</span>
-              </div>
-              <ReactIcon className="w-full" />
-            </div>
-            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <ReduxIcon className="w-full" />
-            </div>
-            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <LaravelIcon className="w-full" />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <BootstrapIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
                 <span className="font-bold">Fav</span>
               </div>
-              <VSCodeIcon />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <TailwindCssIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <GitIcon />
+              <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
+                <span className="font-bold">Fav</span>
+              </div>
+              <Suspense fallback={<ImgLazyLoading />}>
+                <ReactIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <FigmaIcon />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <ReduxIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <PhotoshopIcon />
+              <Suspense fallback={<ImgLazyLoading />}>
+                <LaravelIcon className="w-full" />
+              </Suspense>
             </div>
             <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <IllustratorIcon />
+              <div className="w-full bg-black tracking-widest -rotate-45 absolute top-3 -left-20 text-center">
+                <span className="font-bold">Fav</span>
+              </div>
+              <Suspense fallback={<ImgLazyLoading />}>
+                <VSCodeIcon />
+              </Suspense>
+            </div>
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
+              <Suspense fallback={<ImgLazyLoading />}>
+                <GitIcon />
+              </Suspense>
+            </div>
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
+              <Suspense fallback={<ImgLazyLoading />}>
+                <FigmaIcon />
+              </Suspense>
+            </div>
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
+              <Suspense fallback={<ImgLazyLoading />}>
+                <PhotoshopIcon />
+              </Suspense>
+            </div>
+            <div className="p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
+              <Suspense fallback={<ImgLazyLoading />}>
+                <IllustratorIcon />
+              </Suspense>
             </div>
           </div>
         </article>
