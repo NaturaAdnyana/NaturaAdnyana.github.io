@@ -17,6 +17,7 @@ function Home() {
                 drag
                 dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
                 dragElastic={0.5}
+                whileTap={{ cursor: "grabbing" }}
                 className="absolute w-48 md:w-72 h-auto md:ml-6 rounded-sm cursor-grab rotate-2 shadow-md"
                 src="https://cdn.jsdelivr.net/gh/NaturaAdnyana/NaturaAdnyana.github.io/src/assets/images/childme.webp"
                 alt="Child me"
@@ -25,6 +26,7 @@ function Home() {
                 drag
                 dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
                 dragElastic={0.5}
+                whileTap={{ cursor: "grabbing" }}
                 className="absolute w-64 md:w-96 h-auto md:mb-20 md:mr-11 rounded-sm cursor-grab -rotate-6 shadow-md"
                 src="https://cdn.jsdelivr.net/gh/NaturaAdnyana/NaturaAdnyana.github.io/src/assets/images/2018me.webp"
                 alt="Child me"
