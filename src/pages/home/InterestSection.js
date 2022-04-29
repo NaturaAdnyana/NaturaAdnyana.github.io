@@ -4,7 +4,7 @@ function InterestSection() {
   return (
     <>
       <section className="text-white bg-shadow">
-        <article className="h-screen md:pr-10 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6">
+        <article className="md:h-screen md:pr-10 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6 py-20 md:py-0">
           <div className="flex flex-col justify-center space-y-3 md:basis-1/2 md:p-10 order-2 md:order-1">
             <h3 className="text-xl font-bold">"Everything is about Art"</h3>
             <p>

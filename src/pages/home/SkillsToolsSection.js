@@ -43,24 +43,30 @@ function SkillsToolsSection() {
           </div>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-6">
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-black tracking-widest -rotate-45 absolute -left-10 top-2 md:top-3 md:-left-20 text-center">
-                <span className="font-bold">Fav</span>
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+                <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
+                  Fav
+                </span>
               </div>
               <Suspense fallback={<ImgLazyLoading />}>
                 <HtmlIcon className="w-full" />
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-black tracking-widest -rotate-45 absolute -left-10 top-2 md:top-3 md:-left-20 text-center">
-                <span className="font-bold">Fav</span>
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+                <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
+                  Fav
+                </span>
               </div>
               <Suspense fallback={<ImgLazyLoading />}>
                 <CssIcon className="w-full" />
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-black tracking-widest -rotate-45 absolute -left-10 top-2 md:top-3 md:-left-20 text-center">
-                <span className="font-bold">Fav</span>
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+                <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
+                  Fav
+                </span>
               </div>
               <Suspense fallback={<ImgLazyLoading />}>
                 <JsIcon className="w-full" />
@@ -82,16 +88,20 @@ function SkillsToolsSection() {
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-black tracking-widest -rotate-45 absolute -left-10 top-2 md:top-3 md:-left-20 text-center">
-                <span className="font-bold">Fav</span>
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+                <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
+                  Fav
+                </span>
               </div>
               <Suspense fallback={<ImgLazyLoading />}>
                 <TailwindCssIcon className="w-full" />
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-black tracking-widest -rotate-45 absolute -left-10 top-2 md:top-3 md:-left-20 text-center">
-                <span className="font-bold">Fav</span>
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+                <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
+                  Fav
+                </span>
               </div>
               <Suspense fallback={<ImgLazyLoading />}>
                 <ReactIcon className="w-full" />
@@ -108,8 +118,10 @@ function SkillsToolsSection() {
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-black tracking-widest -rotate-45 absolute -left-10 top-2 md:top-3 md:-left-20 text-center">
-                <span className="font-bold">Fav</span>
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+                <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
+                  Fav
+                </span>
               </div>
               <Suspense fallback={<ImgLazyLoading />}>
                 <VSCodeIcon />

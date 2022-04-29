@@ -118,3 +118,12 @@ body {
 .bg-footer {
   background: rgba(0, 0, 0, 0.5);
 }
+
+.bg-gold {
+  background: rgb(153, 113, 0);
+  background: radial-gradient(
+    circle,
+    rgba(153, 113, 0, 1) 0%,
+    rgba(237, 209, 79, 1) 100%
+  );
+}
