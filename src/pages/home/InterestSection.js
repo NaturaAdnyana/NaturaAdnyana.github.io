@@ -4,8 +4,8 @@ function InterestSection() {
   return (
     <>
       <section className="text-white bg-shadow">
-        <article className="h-screen pr-10 flex container mx-auto w-11/12 px-6">
-          <div className="flex flex-col justify-center space-y-3 basis-1/2 p-10">
+        <article className="h-screen md:pr-10 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6">
+          <div className="flex flex-col justify-center space-y-3 md:basis-1/2 md:p-10 order-2 md:order-1">
             <h3 className="text-xl font-bold">"Everything is about Art"</h3>
             <p>
               I can't say that I'm an artistic person, but I love art so much! I
@@ -36,9 +36,9 @@ function InterestSection() {
               stupid. Because technology never stop growing.
             </p>
           </div>
-          <div className="h-screen basis-1/2 pt-40 pb-32">
-            <h2 className="sticky top-40 text-gradient rotate-12 mx-auto">
-              <span className="text-8xl">WHAT I INTEREST TO?</span>
+          <div className="md:h-screen md:basis-1/2 md:pt-40 md:pb-32 order-1 md:order-2">
+            <h2 className="md:sticky md:top-40 text-gradient md:rotate-12 mx-auto text-center md:text-left py-10 md:py-0">
+              <span className="text-6xl md:text-8xl">WHAT I INTEREST TO?</span>
               <br />
               <span className="tracking-widest">
                 Life is f**king inconsistent, right?

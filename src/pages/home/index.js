@@ -32,7 +32,7 @@ function Home() {
                 height="100%"
               />
             </div>
-            <div className="flex justify-center flex-col h-screen space-y-6 mt-10 md:mt-0">
+            <div className="flex justify-center flex-col h-screen space-y-6 mt-16 md:mt-0">
               <h1 className="text-center">
                 <span className="text-6xl md:text-10xl">HI, </span>
                 <span className="text-5xl md:text-8xl">IT'S ME</span>

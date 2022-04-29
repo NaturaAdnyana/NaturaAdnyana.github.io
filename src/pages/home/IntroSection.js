@@ -4,11 +4,11 @@ function IntroSection() {
   return (
     <>
       <section className="text-white bg-shadow" id="intro">
-        <article className="h-screen pr-14 flex container mx-auto w-11/12 px-6">
-          <div className="h-screen basis-1/2 pt-40 pb-52">
-            <h2 className="sticky top-40 text-gradient -rotate-12 mx-auto">
-              <span className="text-8xl">
-                WHO AM I<span className="text-10xl">?</span>
+        <article className="md:h-screen md:pr-14 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6 py-20 md:py-0">
+          <div className="md:h-screen md:basis-1/2 md:pt-40 pb-6 md:pb-52">
+            <h2 className="md:sticky md:top-40 text-gradient md:-rotate-12 mx-auto text-center md:text-left">
+              <span className="text-6xl md:text-8xl">
+                WHO AM I<span className="md:text-10xl">?</span>
               </span>
               <br />
               <span className="tracking-widest">
@@ -16,11 +16,11 @@ function IntroSection() {
               </span>
             </h2>
           </div>
-          <div className="flex flex-col justify-center space-y-3 basis-1/2">
+          <div className="flex flex-col justify-center md:space-y-3 md:basis-1/2">
             <h3 className="text-xl font-bold">
-              Introduce me - "Natura Adnyana" 20yo
+              Introduce me - "Natura Adnyana"
             </h3>
-            <p>
+            <p className="mt-4">
               So you can call me <i>Natura</i> or <i>Natsura</i> or {"  "}
               <i>Natkun</i> (people calls me like that). It's sounds like
               Japanese name right? Well I'm actually half Japanese/Indonesian,
