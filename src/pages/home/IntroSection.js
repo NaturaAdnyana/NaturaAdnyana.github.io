@@ -29,7 +29,7 @@ function IntroSection() {
               University. I love technology (literally to broke something) since
               I'm on 13 years old, started from when I trying to disassemble my
               new phone, fixing my cheap electronic gadgets, cracking softwares,
-              and now I'm trying to make a website. My goal is to be a Software
+              and now I'm tried to make a website. My goal is to be a Software
               Engineer. It's still a long journey, so let's see what will happen
               to me next🦾.
             </p>

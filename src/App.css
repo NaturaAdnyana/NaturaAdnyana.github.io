@@ -1,5 +1,7 @@
 * {
   font-family: Rubik, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 h1 span,
@@ -25,7 +27,7 @@ body {
 }
 
 /* H1 BG */
-.text-gradient:hover {
+.text-gradient {
   background: linear-gradient(18deg, #820098, #00ff58);
   background-size: 600% 600%;
   -webkit-background-clip: text;
@@ -126,4 +128,8 @@ body {
     rgba(153, 113, 0, 1) 0%,
     rgba(237, 209, 79, 1) 100%
   );
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }

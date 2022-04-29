@@ -32,8 +32,8 @@ function Home() {
                 height="100%"
               />
             </div>
-            <div className="flex justify-center flex-col h-screen space-y-6 mt-16 md:mt-0">
-              <h1 className="text-center">
+            <div className="flex justify-center flex-col h-screen space-y-6 mt-16 md:mt-0 z-10">
+              <h1 className="text-center text-shadow">
                 <span className="text-6xl md:text-10xl">HI, </span>
                 <span className="text-5xl md:text-8xl">IT'S ME</span>
                 <br />
