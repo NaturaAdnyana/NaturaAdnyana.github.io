@@ -19,7 +19,7 @@ const pathVariants = {
     fill: "rgba(255, 255, 255, 1)",
     pathLength: 1,
     transition: {
-      duration: 2,
+      duration: 1.5,
       ease: "easeInOut",
     },
   },

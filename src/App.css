@@ -83,12 +83,6 @@ body {
 }
 
 .bg-circle-shadow {
-  /* background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 12%,
-    rgba(0, 0, 0, 0) 67%
-  ); */
   background: rgb(0, 0, 0);
   background: radial-gradient(
     circle,
@@ -112,9 +106,15 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.bg-footer {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 20% 20% 0 0;
+.bg-b-bar {
   box-shadow: 0 -5px 10px 5px rgba(255, 255, 255, 0.03),
     inset 0 5px 10px 8px rgba(255, 255, 255, 0.05);
+}
+
+.round-b-bar {
+  border-radius: 20% 20% 0 0;
+}
+
+.bg-footer {
+  background: rgba(0, 0, 0, 0.5);
 }

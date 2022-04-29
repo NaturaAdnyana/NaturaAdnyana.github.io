@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import LoadingPage from "./components/LoadingPage";
+import MobileNavbar from "./components/MobileNavbar";
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -14,9 +16,10 @@ const UnderContstruction = React.lazy(() =>
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<span>Loading. . .</span>}>
+      <Suspense fallback={<LoadingPage />}>
         <header>
           <Navbar />
+          <MobileNavbar />
         </header>
         <main className="scroll-smooth">
           <Routes>

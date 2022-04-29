@@ -13,7 +13,7 @@ function Navbar() {
     }
   };
   return (
-    <nav className=" py-6 fixed top-0 right-0 h-screen flex items-center px-10 flex-col">
+    <nav className="md:flex hidden py-6 fixed top-0 right-0 h-screen items-center px-10 flex-col">
       <Link to="/">
         <Logo className="w-10 h-10" />
         <span class="sr-only">Natura Logo</span>
