@@ -10,30 +10,32 @@ function InterestSection() {
             <p>
               I can't say that I'm an artistic person, but I love art so much! I
               love to do painting when I was a kid. I also had an interest with
-              popup book arts that made by Robert Sabuda, he is a legend.
+              popup book arts that made by Robert Sabuda, he inspired me to
+              always think creative.
             </p>
             <p>
-              I like sport also, especially <s>soccer</s> football, I think how
-              we score a goal is an art too cause we can't score the same way
-              everytime. If you want to know, my favourite football team is
-              Manchester United, even now they play sh*t.
+              I like sport also, especially <s>soccer</s> football. I think how
+              we score a goal is an art too because we can't score exacly the
+              same way for twice. If you want to know, my favourite football
+              team is Manchester United, even though now they play sh*t.
             </p>
             <p>
-              About music taste, Avicii is a legend. The lyrics that he made
-              makes me stronger. Also basically I love the music with
-              fingerstyle guitar in it. You know Peach Pit? I love to listen to
-              his songs for now.
+              About music taste, Avicii is a legend. His song lyrics makes me
+              strong everyday. And basically I love the music with fingerstyle
+              guitar in it. You know Peach Pit? I love to listen to his songs
+              for now.
             </p>
             <p>
               And Video Games? Of course I love it. Skyrim, Minecraft, and GTA
-              has a special place in my heart. But for me "The Little
-              Nightmares" and "The Last of Us" has the best visual & art.
+              has a special place in my heart. But also, for me "The Little
+              Nightmares" and "The Last of Us" has the best story, visual, and
+              art.
             </p>
             <p>
-              Last but not least, I do coding, the reason is because{" "}
+              Last but not least, I do coding everyday, the reason is because{" "}
               <s>I hate my life</s> it is a promising job & fun to do. Coding
-              teach me to stay patient, grateful, never give up, and stay feel
-              stupid. Because technology never stop growing.
+              teach me to be patient, grateful, and feel stupid everytime,
+              because "technology never die".
             </p>
           </div>
           <div className="md:h-screen md:basis-1/2 md:pt-40 md:pb-32 order-1 md:order-2">

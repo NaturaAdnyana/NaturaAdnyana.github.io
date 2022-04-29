@@ -16,7 +16,7 @@ function IntroSection() {
               </span>
             </h2>
           </div>
-          <div className="flex flex-col justify-center md:space-y-3 md:basis-1/2">
+          <div className="flex flex-col justify-center space-y-3 md:basis-1/2">
             <h3 className="text-xl font-bold">
               Introduce me - "Natura Adnyana"
             </h3>
@@ -24,14 +24,15 @@ function IntroSection() {
               So you can call me <i>Natura</i> or <i>Natsura</i> or {"  "}
               <i>Natkun</i> (people calls me like that). It's sounds like
               Japanese name right? Well I'm actually half Japanese/Indonesian,
-              live in the beautiful island called Bali. <br />
+              live in the beautiful island called Bali.
+            </p>
+            <p>
               I'm a web developer and also a student of the INSTIKI Indonesia
-              University. I love technology (literally to broke something) since
-              I'm on 13 years old, started from when I trying to disassemble my
-              new phone, fixing my cheap electronic gadgets, cracking softwares,
-              and now I'm tried to make a website. My goal is to be a Software
-              Engineer. It's still a long journey, so let's see what will happen
-              to me next🦾.
+              University. I love technology since I'm on 13 years old, started
+              from when I trying to disassemble my new phone, fixing my cheap
+              electronic gadgets, cracking softwares, and now I'm tried to make
+              a website. My goal is to be a Software Engineer. It's still a long
+              journey, so let's see what will happen to me next🦾.
             </p>
           </div>
         </article>
