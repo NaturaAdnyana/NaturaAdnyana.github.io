@@ -43,7 +43,7 @@ function SkillsToolsSection() {
           </div>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-6">
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-2 -left-16 md:-left-20 text-center">
                 <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
                   Fav
                 </span>
@@ -53,7 +53,7 @@ function SkillsToolsSection() {
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-2 -left-16 md:-left-20 text-center">
                 <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
                   Fav
                 </span>
@@ -63,7 +63,7 @@ function SkillsToolsSection() {
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-2 -left-16 md:-left-20 text-center">
                 <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
                   Fav
                 </span>
@@ -88,7 +88,7 @@ function SkillsToolsSection() {
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-2 -left-16 md:-left-20 text-center">
                 <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
                   Fav
                 </span>
@@ -98,7 +98,7 @@ function SkillsToolsSection() {
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-2 -left-16 md:-left-20 text-center">
                 <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
                   Fav
                 </span>
@@ -118,7 +118,7 @@ function SkillsToolsSection() {
               </Suspense>
             </div>
             <div className="p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-3 -left-16 md:-left-20 text-center">
+              <div className="w-full bg-gold tracking-widest -rotate-45 absolute top-2 -left-16 md:-left-20 text-center">
                 <span className="text-transparent md:text-white font-bold text-2xs md:text-base">
                   Fav
                 </span>
