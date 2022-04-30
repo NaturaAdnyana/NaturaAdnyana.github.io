@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import HomeIcon from "../assets/icons/HomeIcon";
@@ -19,53 +19,74 @@ function MobileNavbar(props) {
       <div className="w-10 h-1 bg-zinc-700 mx-auto mb-3 rounded-full"></div>
       <div className="flex justify-around items-center space-x-3">
         <div className="flex flex-col justify-center items-center space-y-6">
-          <Link
+          <NavLink
             to="/certifications"
-            className="p-4 rounded-3xl bg-b-bar transition-colors hover:bg-zinc-900"
+            className={({ isActive }) => {
+              return isActive
+                ? "bg-zinc-900 p-5 rounded-3xl bg-b-bar transition-colors"
+                : "p-4 rounded-3xl bg-b-bar transition-colors";
+            }}
           >
             <CertifIcon className="w-5 h-5 fill-white" />
             <span class="sr-only">Certifications Button</span>
-          </Link>
+          </NavLink>
           <div className="text-white text-2xs basis-1/5">Certifs</div>
         </div>
         <div className="flex flex-col justify-center items-center space-y-6">
-          <Link
+          <NavLink
             to="/contact"
-            className="p-4 rounded-3xl bg-b-bar transition-colors hover:bg-zinc-900"
+            className={({ isActive }) => {
+              return isActive
+                ? "bg-zinc-900 p-5 rounded-3xl bg-b-bar transition-colors"
+                : "p-4 rounded-3xl bg-b-bar transition-colors";
+            }}
           >
             <ContactIcon className="w-5 h-5 fill-white" />
             <span class="sr-only">Contact Button</span>
-          </Link>
+          </NavLink>
           <div className="text-white text-2xs basis-1/5">Contact</div>
         </div>
-        <div className="flex flex-col justify-center items-center space-y-4">
-          <Link
+        <div className="flex flex-col justify-center items-center space-y-6">
+          <NavLink
+            exact
             to="/"
-            className="p-5 rounded-3xl bg-b-bar transition-colors hover:bg-zinc-900"
+            className={({ isActive }) => {
+              return isActive
+                ? "bg-zinc-900 p-5 rounded-3xl bg-b-bar transition-colors"
+                : "p-4 rounded-3xl bg-b-bar transition-colors";
+            }}
           >
             <HomeIcon className="w-5 h-5 fill-white" />
             <span class="sr-only">Home Button</span>
-          </Link>
+          </NavLink>
           <div className="text-white text-2xs basis-1/5">Home</div>
         </div>
         <div className="flex flex-col justify-center items-center space-y-6">
-          <Link
+          <NavLink
             to="/blogs"
-            className="p-4 rounded-3xl bg-b-bar transition-colors hover:bg-zinc-900"
+            className={({ isActive }) => {
+              return isActive
+                ? "bg-zinc-900 p-5 rounded-3xl bg-b-bar transition-colors"
+                : "p-4 rounded-3xl bg-b-bar transition-colors";
+            }}
           >
             <BlogsIcon className="w-5 h-5 fill-white" />
             <span class="sr-only">Blogs Button</span>
-          </Link>
+          </NavLink>
           <div className="text-white text-2xs basis-1/5">Blogs</div>
         </div>
         <div className="flex flex-col justify-center items-center space-y-6">
-          <Link
+          <NavLink
             to="/works"
-            className="p-4 rounded-3xl bg-b-bar transition-colors hover:bg-zinc-900"
+            className={({ isActive }) => {
+              return isActive
+                ? "bg-zinc-900 p-5 rounded-3xl bg-b-bar transition-colors"
+                : "p-4 rounded-3xl bg-b-bar transition-colors";
+            }}
           >
             <WorkIcon className="w-5 h-5 fill-white" />
             <span class="sr-only">Works Button</span>
-          </Link>
+          </NavLink>
           <div className="text-white text-2xs basis-1/5">Works</div>
         </div>
       </div>
