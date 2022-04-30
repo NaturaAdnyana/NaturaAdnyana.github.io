@@ -39,8 +39,10 @@ function InterestSection() {
             </p>
           </div>
           <div className="md:h-screen md:basis-1/2 md:pt-40 md:pb-32 order-1 md:order-2">
-            <h2 className="md:sticky md:top-40 text-gradient md:rotate-12 mx-auto text-center md:text-left py-10 md:py-0">
-              <span className="text-6xl md:text-8xl">WHAT I INTEREST TO?</span>
+            <h2 className="md:sticky md:top-40 md:rotate-12 mx-auto text-center md:text-left py-10 md:py-0">
+              <span className="text-6xl md:text-8xl">
+                WHAT I <span className="text-gradient">INTEREST TO?</span>
+              </span>
               <br />
               <span className="tracking-widest">
                 Life is f**king inconsistent, right?

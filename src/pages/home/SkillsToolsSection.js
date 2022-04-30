@@ -33,8 +33,10 @@ function SkillsToolsSection() {
       <section className="text-white bg-shadow">
         <article className="md:pr-16 container mx-auto md:w-11/12 px-6 py-32">
           <div className="pt-2 pb-10">
-            <h2 className="text-center text-gradient mx-auto">
-              <span className="text-5xl md:text-8xl">SKILLS & TOOLS</span>
+            <h2 className="text-center mx-auto">
+              <span className="text-5xl md:text-8xl text-gradient">
+                SKILLS & TOOLS
+              </span>
               <br />
               <span className="tracking-widest">
                 Mastering tools without creativity is nothing.

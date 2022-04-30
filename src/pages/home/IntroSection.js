@@ -6,12 +6,12 @@ function IntroSection() {
       <section className="text-white bg-shadow" id="intro">
         <article className="md:h-screen md:pr-14 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6 py-20 md:py-0">
           <div className="md:h-screen md:basis-1/2 md:pt-40 pb-6 md:pb-52">
-            <h2 className="md:sticky md:top-40 text-gradient md:-rotate-12 mx-auto text-center md:text-left">
+            <h2 className="md:sticky md:top-40 md:-rotate-12 mx-auto text-center md:text-left text-gradient">
               <span className="text-6xl md:text-8xl">
                 WHO AM I<span className="md:text-10xl">?</span>
               </span>
               <br />
-              <span className="tracking-widest">
+              <span className="tracking-widest bg-white bg-clip-text ">
                 My life is not really exciting actually.
               </span>
             </h2>
