@@ -4,8 +4,8 @@ function InterestSection() {
   return (
     <>
       <section className="text-white bg-shadow">
-        <article className="md:h-screen md:pr-10 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6 py-20 md:py-0">
-          <div className="flex flex-col justify-center space-y-3 md:basis-1/2 md:p-10 order-2 md:order-1">
+        <article className="md:h-screen md:pr-10 flex flex-col md:flex-row lg:container mx-auto lg:w-11/12 md:px-6 py-20 md:py-0">
+          <div className="flex flex-col justify-center space-y-3 md:basis-1/2 px-10 md:px-3 md:pr-7 order-2 md:order-1">
             <h3 className="text-xl font-bold">"Everything is about Art"</h3>
             <p>
               I can't say that I'm an artistic person, but I love art so much! I
@@ -34,13 +34,13 @@ function InterestSection() {
             <p>
               Last but not least, I do coding everyday, the reason is because{" "}
               <s>I hate my life</s> it is a promising job & fun to do. Coding
-              teach me to be patient, grateful, and feel stupid everytime,
-              because "technology never die".
+              teaches me to always be patient, grateful, and consistent, because
+              "technology is never die".
             </p>
           </div>
-          <div className="md:h-screen md:basis-1/2 md:pt-40 md:pb-32 order-1 md:order-2">
-            <h2 className="md:sticky md:top-40 md:rotate-12 mx-auto text-center md:text-left py-10 md:py-0">
-              <span className="text-6xl md:text-8xl">
+          <div className="md:h-screen md:basis-1/2 lg:pt-28 lg:pb-24 order-1 md:order-2">
+            <h2 className="md:sticky md:top-40 md:rotate-12 mx-auto text-center md:text-left py-10 md:py-0 px-5">
+              <span className="text-6xl lg:text-8xl">
                 WHAT I <span className="text-gradient">INTEREST TO?</span>
               </span>
               <br />

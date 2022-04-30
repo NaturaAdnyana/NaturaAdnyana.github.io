@@ -18,7 +18,7 @@ function Home() {
                 dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
                 dragElastic={0.5}
                 whileTap={{ cursor: "grabbing" }}
-                className="absolute w-48 md:w-72 h-auto md:ml-6 rounded-sm cursor-grab rotate-2 shadow-md"
+                className="absolute w-48 lg:w-72 h-auto md:ml-6 rounded-sm cursor-grab rotate-2 shadow-md"
                 src="https://cdn.jsdelivr.net/gh/NaturaAdnyana/NaturaAdnyana.github.io/src/assets/images/childme.webp"
                 alt="Child me"
               />
@@ -27,7 +27,7 @@ function Home() {
                 dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
                 dragElastic={0.5}
                 whileTap={{ cursor: "grabbing" }}
-                className="absolute w-64 md:w-96 h-auto md:mb-20 md:mr-11 rounded-sm cursor-grab -rotate-6 shadow-md"
+                className="absolute w-64 lg:w-96 h-auto md:mb-20 md:mr-11 rounded-sm cursor-grab -rotate-6 shadow-md"
                 src="https://cdn.jsdelivr.net/gh/NaturaAdnyana/NaturaAdnyana.github.io/src/assets/images/2018me.webp"
                 alt="Child me"
                 width="100%"
@@ -36,15 +36,15 @@ function Home() {
             </div>
             <div className="flex justify-center flex-col h-screen space-y-6 mt-16 md:mt-0 z-10">
               <h1 className="text-center text-shadow">
-                <span className="text-6xl md:text-10xl">HI, </span>
-                <span className="text-5xl md:text-8xl">IT'S ME</span>
+                <span className="text-6xl lg:text-10xl">HI, </span>
+                <span className="text-5xl lg:text-8xl">IT'S ME</span>
                 <br />
-                <span className="text-7xl md:text-10xl font-bold text-gradient">
+                <span className="text-7xl lg:text-10xl font-bold text-gradient">
                   {" "}
                   NATURA
                 </span>
               </h1>
-              <div className="text-center flex flex-col md:flex-row space-x-2">
+              <div className="text-center flex flex-col lg:flex-row space-x-2">
                 <span>Front-end Developer</span>
                 <span> | Graphic Designer | </span>
                 <span>Aspiring Software Engineer</span>
