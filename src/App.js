@@ -1,8 +1,9 @@
 import React, { Suspense } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import LoadingPage from "./components/LoadingPage";
 import MobileNavbar from "./components/MobileNavbar";
+import { AnimatePresence } from "framer-motion";
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -14,6 +15,8 @@ const UnderContstruction = React.lazy(() =>
 );
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="App">
       <Suspense fallback={<LoadingPage />}>
@@ -21,15 +24,17 @@ function App() {
           <Navbar />
           <MobileNavbar />
         </header>
-        <main className="scroll-smooth">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="works" element={<UnderContstruction />} />
-            <Route path="blogs" element={<UnderContstruction />} />
-            <Route path="certifications" element={<UnderContstruction />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+        <main>
+          <AnimatePresence>
+            <Routes location={location} key={location.key}>
+              <Route path="/" element={<Home />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="works" element={<UnderContstruction />} />
+              <Route path="blogs" element={<UnderContstruction />} />
+              <Route path="certifications" element={<UnderContstruction />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </AnimatePresence>
         </main>
         <footer>
           <Footer />

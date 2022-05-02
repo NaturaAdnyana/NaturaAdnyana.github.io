@@ -28,7 +28,7 @@ function MobileNavbar(props) {
             }}
           >
             <CertifIcon className="w-5 h-5 fill-white" />
-            <span class="sr-only">Certifications Button</span>
+            <span className="sr-only">Certifications Button</span>
           </NavLink>
           <div className="text-white text-2xs basis-1/5">Certifs</div>
         </div>
@@ -42,13 +42,12 @@ function MobileNavbar(props) {
             }}
           >
             <ContactIcon className="w-5 h-5 fill-white" />
-            <span class="sr-only">Contact Button</span>
+            <span className="sr-only">Contact Button</span>
           </NavLink>
           <div className="text-white text-2xs basis-1/5">Contact</div>
         </div>
         <div className="flex flex-col justify-center items-center space-y-6">
           <NavLink
-            exact
             to="/"
             className={({ isActive }) => {
               return isActive
@@ -57,7 +56,7 @@ function MobileNavbar(props) {
             }}
           >
             <HomeIcon className="w-5 h-5 fill-white" />
-            <span class="sr-only">Home Button</span>
+            <span className="sr-only">Home Button</span>
           </NavLink>
           <div className="text-white text-2xs basis-1/5">Home</div>
         </div>
@@ -71,7 +70,7 @@ function MobileNavbar(props) {
             }}
           >
             <BlogsIcon className="w-5 h-5 fill-white" />
-            <span class="sr-only">Blogs Button</span>
+            <span className="sr-only">Blogs Button</span>
           </NavLink>
           <div className="text-white text-2xs basis-1/5">Blogs</div>
         </div>
@@ -85,10 +84,13 @@ function MobileNavbar(props) {
             }}
           >
             <WorkIcon className="w-5 h-5 fill-white" />
-            <span class="sr-only">Works Button</span>
+            <span className="sr-only">Works Button</span>
           </NavLink>
           <div className="text-white text-2xs basis-1/5">Works</div>
         </div>
+      </div>
+      <div className="absolute bottom-10 text-white text-center text-xs left-1/2 -translate-x-1/2">
+        <span className="text-md">&copy;</span> 2022 by Natura Adnyana
       </div>
     </motion.nav>
   );

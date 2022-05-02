@@ -7,7 +7,7 @@ function Footer() {
     <>
       <div className="hidden md:flex items-center bg-black text-white bg-footer bg-b-bar round-b-bar px-24 pt-20 pb-10">
         <div className="grow text-center">
-          <span className="text-2xl">&#9786;</span>2022 Made by{" "}
+          &copy; 2022 by{" "}
           <Link className="underline" to="/contact">
             Natura Adnyana.
           </Link>

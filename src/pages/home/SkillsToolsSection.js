@@ -50,7 +50,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <HtmlIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 HTML5
               </div>
             </div>
@@ -59,7 +59,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <CssIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 CSS3
               </div>
             </div>
@@ -68,7 +68,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <JsIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Javascript
               </div>
             </div>
@@ -76,7 +76,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <PhpIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 PHP
               </div>
             </div>
@@ -84,7 +84,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <SassIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Sass
               </div>
             </div>
@@ -92,7 +92,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <BootstrapIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Bootstrap
               </div>
             </div>
@@ -101,7 +101,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <TailwindCssIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Tailwind
               </div>
             </div>
@@ -110,7 +110,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <ReactIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 ReactJS
               </div>
             </div>
@@ -118,7 +118,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <ReduxIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Redux
               </div>
             </div>
@@ -126,7 +126,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <LaravelIcon className="w-full" />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Laravel
               </div>
             </div>
@@ -135,7 +135,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <VSCodeIcon />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 VSCode
               </div>
             </div>
@@ -143,7 +143,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <GitIcon />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Git
               </div>
             </div>
@@ -151,7 +151,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <FigmaIcon />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Figma
               </div>
             </div>
@@ -159,7 +159,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <PhotoshopIcon />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Photoshop
               </div>
             </div>
@@ -167,7 +167,7 @@ function SkillsToolsSection() {
               <Suspense fallback={<ImgLazyLoading />}>
                 <IllustratorIcon />
               </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 Illustrator
               </div>
             </div>

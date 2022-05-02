@@ -5,8 +5,10 @@ function InterestSection() {
     <>
       <section className="text-white bg-shadow">
         <article className="md:h-screen md:pr-10 flex flex-col md:flex-row lg:container mx-auto lg:w-11/12 md:px-6 py-20 md:py-0">
-          <div className="flex flex-col justify-center space-y-3 md:basis-1/2 px-10 md:px-3 md:pr-7 order-2 md:order-1">
-            <h3 className="text-xl font-bold">"Everything is about Art"</h3>
+          <div className="flex flex-col justify-center space-y-3 md:basis-1/2 px-5 md:px-3 md:pr-7 order-2 md:order-1">
+            <h3 className="text-xl font-bold">
+              "Everything is about Art & Passion"
+            </h3>
             <p>
               I can't say that I'm an artistic person, but I love art so much! I
               love to do painting when I was a kid. I also had an interest with
