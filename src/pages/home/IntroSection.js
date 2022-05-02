@@ -48,6 +48,9 @@ function IntroSection() {
               </h4>
             ) : (
               <h3 className="text-xl font-bold">
+                <div className="bg-blue-500 rounded-full relative inline-flex mr-3 opacity-50">
+                  <span className="animate-ping bg-indigo-900 p-2 rounded-full inline-flex"></span>
+                </div>
                 Introduce me - "Natura Adnyana"
               </h3>
             )}

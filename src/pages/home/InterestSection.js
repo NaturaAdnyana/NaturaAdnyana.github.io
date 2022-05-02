@@ -7,6 +7,9 @@ function InterestSection() {
         <article className="md:h-screen md:pr-10 flex flex-col md:flex-row lg:container mx-auto lg:w-11/12 md:px-6 py-20 md:py-0">
           <div className="flex flex-col justify-center space-y-3 md:basis-1/2 px-5 md:px-3 md:pr-7 order-2 md:order-1">
             <h3 className="text-xl font-bold">
+              <div className="bg-blue-500 rounded-full relative inline-flex mr-3 opacity-50">
+                <span className="animate-ping bg-indigo-900 p-2 rounded-full inline-flex"></span>
+              </div>
               "Everything is about Art & Passion"
             </h3>
             <p>

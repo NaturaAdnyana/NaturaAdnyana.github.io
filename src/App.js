@@ -8,7 +8,7 @@ import { AnimatePresence } from "framer-motion";
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
 const Home = React.lazy(() => import("./pages/home"));
-const Contact = React.lazy(() => import("./pages/Contact"));
+const Contact = React.lazy(() => import("./pages/contact"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 const UnderContstruction = React.lazy(() =>
   import("./pages/UnderContstruction")
