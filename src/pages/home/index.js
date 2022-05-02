@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import IntroSection from "./IntroSection";
 import InterestSection from "./InterestSection";
 import SkillsToolsSection from "./SkillsToolsSection";
+import HomeCTASection from "./HomeCTASection";
 
 const containerVariants = {
   hidden: {
@@ -99,6 +100,7 @@ function Home() {
         <IntroSection />
         <InterestSection />
         <SkillsToolsSection />
+        <HomeCTASection />
       </motion.div>
     </motion.div>
   );

@@ -33,7 +33,7 @@ function Navbar() {
   };
   return (
     <motion.nav
-      className="md:flex hidden py-6 fixed top-0 right-0 h-screen items-center px-10 flex-col"
+      className="md:flex hidden py-6 fixed top-0 right-0 h-screen text-sm items-center px-10 flex-col"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
