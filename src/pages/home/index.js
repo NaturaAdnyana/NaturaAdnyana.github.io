@@ -77,7 +77,7 @@ function Home() {
                   width="100%"
                   height="100%"
                 />
-                <motion.img
+                {/* <motion.img
                   drag
                   dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
                   dragElastic={0.5}
@@ -87,7 +87,7 @@ function Home() {
                   alt="Child me"
                   width="100%"
                   height="100%"
-                />
+                /> */}
               </div>
               <div className="flex justify-center flex-col h-screen space-y-6 mt-16 md:mt-0 z-10">
                 <h1 className="text-center text-shadow">
