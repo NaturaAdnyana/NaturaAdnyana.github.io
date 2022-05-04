@@ -28,7 +28,7 @@ function IntroSection() {
 
   return (
     <>
-      <section className="text-white bg-shadow" id="intro">
+      <section className="text-white bg-shadow" id="first">
         <article className="md:h-screen md:pr-14 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6 py-20 md:py-0">
           <div className="md:h-screen md:basis-1/2 md:pt-40 pb-6 md:pb-52">
             <h2 className="md:sticky md:top-40 md:-rotate-12 mx-auto text-center md:text-left text-gradient">

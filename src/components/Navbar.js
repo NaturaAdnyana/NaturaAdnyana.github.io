@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ArrowRight from "../assets/icons/ArrowRight";
 import Logo from "../assets/icons/Logo";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
@@ -22,6 +22,18 @@ const navMenuVariants = {
   },
 };
 
+const scrollArrowVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  },
+};
+
 function Navbar() {
   const [isBottom, setIsBottom] = useState(false);
   window.onscroll = function (e) {
@@ -31,6 +43,13 @@ function Navbar() {
       setIsBottom(false);
     }
   };
+
+  const handleScrollBtn = () => {
+    window.scrollTo({
+      top: window.scrollY + window.innerHeight,
+    });
+  };
+
   return (
     <motion.nav
       className="md:flex hidden py-6 fixed top-0 right-0 h-screen text-sm items-center px-10 flex-col"
@@ -75,18 +94,31 @@ function Navbar() {
           </Link>
         </motion.li>
       </ul>
-      {!isBottom && (
-        <motion.a
-          href="#intro"
-          className="absolute bottom-10 opacity-70 animate-bounce"
-          variants={navMenuVariants}
+
+      <motion.span
+        className="absolute bottom-10 opacity-70 cursor-pointer animate-bounce"
+        variants={navMenuVariants}
+        onClick={(e) => handleScrollBtn()}
+      >
+        <AnimatePresence
+          initial={false}
+          exitBeforeEnter={true}
+          onExitComplete={() => null}
         >
-          <div className="rotate-90 text-white">
-            <span className="text-xs">SCROLL </span>
-            <ArrowRight />
-          </div>
-        </motion.a>
-      )}
+          {!isBottom && (
+            <motion.div
+              className="rotate-90 text-white"
+              variants={scrollArrowVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <span className="text-xs">SCROLL </span>
+              <ArrowRight />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.span>
     </motion.nav>
   );
 }

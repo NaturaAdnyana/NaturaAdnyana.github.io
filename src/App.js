@@ -25,7 +25,11 @@ function App() {
           <MobileNavbar />
         </header>
         <main>
-          <AnimatePresence>
+          <AnimatePresence
+            // initial={false}
+            exitBeforeEnter={true}
+            // onExitComplete={() => null}
+          >
             <Routes location={location} key={location.key}>
               <Route path="/" element={<Home />} />
               <Route path="contact" element={<Contact />} />

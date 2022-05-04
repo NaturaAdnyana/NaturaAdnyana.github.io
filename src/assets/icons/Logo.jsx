@@ -8,6 +8,7 @@ const svgVariants = {
       duration: 1,
     },
   },
+  exit: {},
 };
 
 const pathVariants = {
@@ -22,6 +23,9 @@ const pathVariants = {
       duration: 1.5,
       ease: "easeInOut",
     },
+  },
+  exit: {
+    fill: "rgba(255, 255, 255, 0)",
   },
 };
 

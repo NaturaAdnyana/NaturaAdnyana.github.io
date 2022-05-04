@@ -10,9 +10,7 @@ const containerVariants = {
     opacity: 1,
   },
   exit: {
-    transition: {
-      ease: "easeInOut",
-    },
+    opacity: 0,
   },
 };
 

@@ -17,10 +17,7 @@ const containerVariants = {
     },
   },
   exit: {
-    transition: {
-      backgroundColor: "rgba(0, 0, 0, 1)",
-      ease: "easeInOut",
-    },
+    backgroundColor: "rgba(0, 0, 0, 1)",
   },
 };
 
@@ -35,8 +32,8 @@ const contentVariants = {
     },
   },
   exit: {
+    opacity: 0,
     transition: {
-      opacity: 0,
       ease: "easeInOut",
     },
   },
