@@ -44,7 +44,7 @@ function SkillsToolsSection() {
               </span>
             </h2>
           </div>
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-6 lg:p-14">
             <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
               <FavRibbon />
               <Suspense fallback={<ImgLazyLoading />}>
