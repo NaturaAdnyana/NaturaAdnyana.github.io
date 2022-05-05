@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AirplaneIcon from "../../assets/icons/AirplaneIcon";
+import OutlineBtn from "../../shared/OutlineBtn";
 
 function HomeCTASection(props) {
   return (
@@ -19,10 +20,9 @@ function HomeCTASection(props) {
               <span className="text-lg lg:text-3xl block">AYO KOLABORASI</span>
             </h2>
             <Link to="/contact">
-              <div className="group p-4 border-2 transition-all hover:bg-white hover:text-black rounded overflow-hidden">
-                <span>Contact me @Natura</span>
+              <OutlineBtn hint="Contact me @Natura">
                 <AirplaneIcon className="w-6 h-6 inline ml-2 -translate-y-1 rotate-45 transition-all group-hover:rotate-90  group-hover:translate-y-0 group-hover:translate-x-1" />
-              </div>
+              </OutlineBtn>
             </Link>
           </div>
         </article>

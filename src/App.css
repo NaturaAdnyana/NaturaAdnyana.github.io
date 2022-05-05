@@ -27,6 +27,15 @@ body {
   }
 }
 
+.bg-gradient {
+  background: linear-gradient(18deg, #b900d9, #00ff58);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  -o-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+}
+
 /* H1 BG */
 .text-gradient {
   background: linear-gradient(18deg, #b900d9, #00ff58);

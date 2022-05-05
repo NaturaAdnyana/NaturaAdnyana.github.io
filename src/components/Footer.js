@@ -5,7 +5,7 @@ import Logo from "../assets/icons/Logo";
 function Footer() {
   return (
     <>
-      <div className="hidden md:flex items-center bg-black text-white bg-footer bg-b-bar px-24 pt-20 pb-10">
+      <div className="hidden md:flex items-center bg-black text-white bg-footer bg-b-bar px-24 py-5">
         <div className="grow text-center">
           &copy; 2022 by{" "}
           <Link className="underline" to="/contact">
