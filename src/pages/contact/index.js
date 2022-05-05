@@ -64,7 +64,7 @@ function Contact() {
               </div>
               <div className="flex justify-center items-center mt-6 space-x-5">
                 <a
-                  href="mailto:natura538@gmail.com?subject=Ayo%20Kolaborasi&body=Halo, Saya%20ingin%20berkolaborasi%20dengan%20anda%21"
+                  href="mailto:natura538@gmail.com?subject=Let's%20Collaborate&body=Hi, Let's%20make%20an%20outstanding%20project%20together%21"
                   rel="noreferrer noopener"
                   target="_blank"
                 >
