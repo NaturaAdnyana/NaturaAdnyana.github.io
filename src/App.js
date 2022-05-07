@@ -9,6 +9,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
 const Home = React.lazy(() => import("./pages/home"));
+const Works = React.lazy(() => import("./pages/works"));
 const Contact = React.lazy(() => import("./pages/contact"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 const UnderContstruction = React.lazy(() =>
@@ -47,8 +48,8 @@ function App() {
             >
               <Routes location={location} key={location.key}>
                 <Route path="/" element={<Home />} />
+                <Route path="works" element={<Works />} />
                 <Route path="contact" element={<Contact />} />
-                <Route path="works" element={<UnderContstruction />} />
                 <Route path="blogs" element={<UnderContstruction />} />
                 <Route path="certifications" element={<UnderContstruction />} />
                 <Route path="*" element={<NotFound />} />

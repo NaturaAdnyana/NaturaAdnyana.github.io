@@ -5,8 +5,11 @@
   scroll-behavior: smooth;
 }
 
+h1,
+h2,
 h1 span,
-h2 span {
+h2 span,
+.font-oswald {
   font-family: Oswald, sans-serif;
   font-weight: bold;
 }
