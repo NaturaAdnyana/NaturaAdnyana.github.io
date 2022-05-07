@@ -1,7 +1,6 @@
-import React, { Suspense } from "react";
-
-import ImgLazyLoading from "../../components/ImgLazyLoading";
-import FavRibbon from "../../shared/FavRibbon";
+import React from "react";
+import { motion } from "framer-motion";
+import SkillBox from "../../shared/SkillBox";
 
 const HtmlIcon = React.lazy(() => import("../../assets/icons/HtmlIcon"));
 const CssIcon = React.lazy(() => import("../../assets/icons/CssIcon"));
@@ -30,10 +29,14 @@ const IllustratorIcon = React.lazy(() =>
 function SkillsToolsSection() {
   return (
     <>
-      {/* Success is when you finally can say you bored with your things */}
-      <section className="text-white bg-shadow">
-        <article className="md:pr-16 container mx-auto md:w-11/12 px-6 py-32">
-          <div className="pt-2 pb-10">
+      <section className="text-white bg-shadow py-10 md:pt-24 md:pb-14">
+        <article className="md:pr-16 container mx-auto md:w-11/12 px-6">
+          <motion.div
+            className="pt-2 pb-10 md:pb-5"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { delay: 0.5 } }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-center mx-auto">
               <span className="text-5xl md:text-8xl text-gradient">
                 SKILLS & TOOLS
@@ -43,134 +46,53 @@ function SkillsToolsSection() {
                 Mastering tools without creativity is nothing.
               </span>
             </h2>
-          </div>
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-6 lg:p-14">
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <FavRibbon />
-              <Suspense fallback={<ImgLazyLoading />}>
-                <HtmlIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                HTML5
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <FavRibbon />
-              <Suspense fallback={<ImgLazyLoading />}>
-                <CssIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                CSS3
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <FavRibbon />
-              <Suspense fallback={<ImgLazyLoading />}>
-                <JsIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Javascript
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <PhpIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                PHP
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <SassIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Sass
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <BootstrapIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Bootstrap
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <FavRibbon />
-              <Suspense fallback={<ImgLazyLoading />}>
-                <TailwindCssIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Tailwind
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <FavRibbon />
-              <Suspense fallback={<ImgLazyLoading />}>
-                <ReactIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                ReactJS
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <ReduxIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Redux
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <LaravelIcon className="w-full" />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Laravel
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <FavRibbon />
-              <Suspense fallback={<ImgLazyLoading />}>
-                <VSCodeIcon />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                VSCode
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <GitIcon />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Git
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <FigmaIcon />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Figma
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <PhotoshopIcon />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Photoshop
-              </div>
-            </div>
-            <div className="group p-5 md:p-10 rounded-md skill-card-bg shadow-inner relative overflow-hidden">
-              <Suspense fallback={<ImgLazyLoading />}>
-                <IllustratorIcon />
-              </Suspense>
-              <div className="absolute bottom-1 md:bottom-2 text-xs md:text-base left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                Illustrator
-              </div>
-            </div>
+          </motion.div>
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 lg:p-14">
+            <SkillBox name="HTML5" isFav="true">
+              <HtmlIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="CSS3" isFav="true">
+              <CssIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="Javascript" isFav="true">
+              <JsIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="PHP">
+              <PhpIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="SASS">
+              <SassIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="Bootstrap">
+              <BootstrapIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="Tailwind" isFav="true">
+              <TailwindCssIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="ReactJS" isFav="true">
+              <ReactIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="Redux">
+              <ReduxIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="Laravel">
+              <LaravelIcon className="w-full" />
+            </SkillBox>
+            <SkillBox name="VSCode" isFav="true">
+              <VSCodeIcon />
+            </SkillBox>
+            <SkillBox name="Git" isFav="true">
+              <GitIcon />
+            </SkillBox>
+            <SkillBox name="Figma">
+              <FigmaIcon />
+            </SkillBox>
+            <SkillBox name="Photoshop">
+              <PhotoshopIcon />
+            </SkillBox>
+            <SkillBox name="Illustrator">
+              <IllustratorIcon />
+            </SkillBox>
           </div>
         </article>
       </section>

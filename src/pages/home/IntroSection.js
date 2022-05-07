@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function calculateAge(birthMonth, birthDay, birthYear) {
   const todayDate = new Date();
@@ -28,9 +29,14 @@ function IntroSection() {
 
   return (
     <>
-      <section className="text-white bg-shadow" id="first">
-        <article className="md:h-screen md:pr-14 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6 py-20 md:py-0">
-          <div className="md:h-screen md:basis-1/2 md:pt-40 pb-6 md:pb-52">
+      <section className="md:h-screen text-white bg-shadow pt-10 pb-5 md:pb-14">
+        <motion.article
+          className="md:h-full md:pr-14 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { delay: 0.5 } }}
+          viewport={{ once: true }}
+        >
+          <div className="md:h-full md:basis-1/2 md:pt-32 pb-6 md:pb-40">
             <h2 className="md:sticky md:top-40 md:-rotate-12 mx-auto text-center md:text-left text-gradient">
               <span className="text-6xl lg:text-8xl">
                 WHO AM I<span className="text-7xl lg:text-10xl">?</span>
@@ -70,7 +76,7 @@ function IntroSection() {
               journey, so let's see what will happen to me next🦾.
             </p>
           </div>
-        </article>
+        </motion.article>
       </section>
     </>
   );

@@ -1,10 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function InterestSection() {
   return (
     <>
-      <section className="text-white bg-shadow">
-        <article className="md:h-screen md:pr-10 flex flex-col md:flex-row lg:container mx-auto lg:w-11/12 md:px-6 py-20 md:py-0">
+      <section className="md:h-screen text-white bg-shadow py-5 md:pt-10 md:pb-14">
+        <motion.article
+          className="md:h-full md:pr-10 flex flex-col md:flex-row lg:container mx-auto lg:w-11/12 md:px-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { delay: 0.5 } }}
+          viewport={{ once: true }}
+        >
           <div className="flex flex-col justify-center space-y-3 md:basis-1/2 px-5 md:px-3 md:pr-7 order-2 md:order-1">
             <h3 className="text-xl font-bold">
               <div className="bg-blue-500 rounded-full relative inline-flex mr-3 opacity-50">
@@ -44,7 +50,7 @@ function InterestSection() {
             </p>
           </div>
           <div className="md:h-screen md:basis-1/2 lg:pt-28 lg:pb-24 order-1 md:order-2">
-            <h2 className="md:sticky md:top-40 md:rotate-12 mx-auto text-center md:text-left py-10 md:py-0 px-5">
+            <h2 className="md:sticky md:top-40 md:rotate-12 mx-auto text-center md:text-left py-10 md:pt-0 md:pb-20 px-5">
               <span className="text-6xl lg:text-8xl">
                 WHAT I <span className="text-gradient">INTEREST TO?</span>
               </span>
@@ -54,7 +60,7 @@ function InterestSection() {
               </span>
             </h2>
           </div>
-        </article>
+        </motion.article>
       </section>
     </>
   );

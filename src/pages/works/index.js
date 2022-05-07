@@ -60,8 +60,8 @@ const Works = () => {
                 <div className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                   <motion.div
                     className="group relative rounded-md overflow-hidden"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 1 }}
+                    whileInView={{ opacity: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
                   >
