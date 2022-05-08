@@ -26,6 +26,32 @@ const IllustratorIcon = React.lazy(() =>
   import("../../assets/icons/IllustratorIcon")
 );
 
+const skills = [
+  { name: "HTML5", isFav: true, icon: <HtmlIcon className="w-full" /> },
+  { name: "CSS3", isFav: true, icon: <CssIcon className="w-full" /> },
+  { name: "Javascript", isFav: true, icon: <JsIcon className="w-full" /> },
+  { name: "PHP", isFav: false, icon: <PhpIcon className="w-full" /> },
+  { name: "SASS", isFav: false, icon: <SassIcon className="w-full" /> },
+  {
+    name: "Bootstrap",
+    isFav: false,
+    icon: <BootstrapIcon className="w-full" />,
+  },
+  {
+    name: "Tailwind",
+    isFav: true,
+    icon: <TailwindCssIcon className="w-full" />,
+  },
+  { name: "ReactJS", isFav: true, icon: <ReactIcon className="w-full" /> },
+  { name: "Redux", isFav: false, icon: <ReduxIcon className="w-full" /> },
+  { name: "Laravel", isFav: false, icon: <LaravelIcon className="w-full" /> },
+  { name: "VSCode", isFav: true, icon: <VSCodeIcon /> },
+  { name: "Git", isFav: true, icon: <GitIcon /> },
+  { name: "Figma", isFav: false, icon: <FigmaIcon /> },
+  { name: "Photoshop", isFav: false, icon: <PhotoshopIcon /> },
+  { name: "Illustrator", isFav: false, icon: <IllustratorIcon /> },
+];
+
 function SkillsToolsSection() {
   return (
     <>
@@ -48,51 +74,13 @@ function SkillsToolsSection() {
             </h2>
           </motion.div>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 lg:p-14">
-            <SkillBox name="HTML5" isFav="true">
-              <HtmlIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="CSS3" isFav="true">
-              <CssIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="Javascript" isFav="true">
-              <JsIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="PHP">
-              <PhpIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="SASS">
-              <SassIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="Bootstrap">
-              <BootstrapIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="Tailwind" isFav="true">
-              <TailwindCssIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="ReactJS" isFav="true">
-              <ReactIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="Redux">
-              <ReduxIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="Laravel">
-              <LaravelIcon className="w-full" />
-            </SkillBox>
-            <SkillBox name="VSCode" isFav="true">
-              <VSCodeIcon />
-            </SkillBox>
-            <SkillBox name="Git" isFav="true">
-              <GitIcon />
-            </SkillBox>
-            <SkillBox name="Figma">
-              <FigmaIcon />
-            </SkillBox>
-            <SkillBox name="Photoshop">
-              <PhotoshopIcon />
-            </SkillBox>
-            <SkillBox name="Illustrator">
-              <IllustratorIcon />
-            </SkillBox>
+            {skills.map(({ name, isFav, icon }) => {
+              return (
+                <SkillBox key={name} name={name} isFav={isFav}>
+                  {icon}
+                </SkillBox>
+              );
+            })}
           </div>
         </article>
       </section>
