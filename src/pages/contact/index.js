@@ -48,6 +48,10 @@ function Contact() {
     <HelmetProvider>
       <Helmet>
         <title>Contact - Natura Personal Web</title>
+        <meta
+          name="description"
+          content="It's me Natura - Contact or Follow me for any questions or inquiries. Instagram, Github, LinkedIn, Mail, etc. are all available."
+        ></meta>
       </Helmet>
       <motion.div
         variants={containerVariants}
