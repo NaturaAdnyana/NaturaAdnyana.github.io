@@ -48,6 +48,10 @@ function Home() {
     <HelmetProvider>
       <Helmet>
         <title>Home - Natura Personal Web</title>
+        <meta
+          name="description"
+          content="It's me Natura - Aspiring Software Engineer & Front-end Web Developer & Art Lover based in Bali"
+        ></meta>
       </Helmet>
       <motion.div
         variants={containerVariants}

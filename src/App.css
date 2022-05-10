@@ -14,6 +14,10 @@ h2 span,
   font-weight: bold;
 }
 
+.font-rubik {
+  font-family: Rubik, sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,6 +34,38 @@ body {
   }
 }
 
+.bg-vertical-pulse {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.bg-vertical-pulse::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  animation: drop 3s 0s infinite;
+}
+
+@keyframes drop {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
 .bg-gradient {
   background: linear-gradient(18deg, #b900d9, #00ff58);
   background-size: 600% 600%;
@@ -41,8 +77,8 @@ body {
 
 /* H1 BG */
 .text-gradient {
-  background: linear-gradient(18deg, #b900d9, #00ff58);
-  background-size: 600% 600%;
+  background: linear-gradient(18deg, #ff00f7, #00ff9d);
+  background-size: 300% 300%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -153,4 +189,32 @@ body {
 }
 .bg-black-transparent {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.quotes-decoration {
+  position: relative;
+  z-index: 20;
+}
+
+.quotes-decoration::before {
+  content: '"';
+  font-family: "BIZ UDGothic", sans-serif;
+  position: absolute;
+  left: -10%;
+  top: -10%;
+  font-size: 8em;
+  opacity: 0.1;
+  transform: scaleX(-1);
+  z-index: 10;
+}
+
+.quotes-decoration::after {
+  content: '"';
+  font-family: "BIZ UDGothic", sans-serif;
+  position: absolute;
+  right: -10%;
+  top: -10%;
+  font-size: 8em;
+  opacity: 0.1;
+  z-index: 10;
 }
