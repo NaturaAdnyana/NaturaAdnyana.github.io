@@ -18,7 +18,7 @@ function HomeCTASection(props) {
           <div className="h-full text-center flex flex-col justify-center items-center">
             <h2 className="space-y-1 md:space-y-3  mb-10 md:mb-20">
               <span className="text-lg lg:text-3xl block">
-                コラボレーション　しよう！
+                コラボレーションしよう！
               </span>
               <span className="block text-4xl lg:text-8xl">
                 LET'S MAKE
