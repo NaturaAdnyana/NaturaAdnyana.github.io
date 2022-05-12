@@ -61,19 +61,19 @@ function IntroSection() {
               </h3>
             )}
             <p className="mt-4">
-              So you can call me <i>Natura</i> or <i>Natsura</i> or {"  "}
-              <i>Natkun</i> (people calls me like that). It's sounds like
-              Japanese name right? Well I'm actually half Japanese/Indonesian,
-              born in Nara, Japan on 9 August 2001 (now i'm {age} years old),
-              and now live in the beautiful island called Bali.
+              So you can call me <i>Natura</i> or <i>Natsura</i> (people call me
+              like that). It sounds like a Japanese name, right? Well, I'm
+              actually half Japanese-Indonesian, born in Nara, Japan on 9 August
+              2001 (now I'm {age} years old), and now live on the beautiful
+              island called Bali.
             </p>
             <p>
-              I'm a web developer and also a student of the INSTIKI Indonesia
-              University. I love technology since I'm on 13 years old, started
-              from when I trying to disassemble my new phone, fixing my cheap
-              electronic gadgets, cracking softwares, and now I'm tried to make
-              a website. My goal is to be a Software Engineer. It's still a long
-              journey, so let's see what will happen to me next🦾.
+              I'm a web developer and also a student at INSTIKI Indonesia
+              University. I love technology since I'm 13 years old, starting
+              from when I was trying to disassemble my new phone, fixing my
+              cheap electronic gadgets, cracking software, and now I'm trying to
+              make a website. My goal is to be a Software Engineer. It's still a
+              long journey, so let's see what will happen next.😉
             </p>
           </div>
         </motion.article>
