@@ -48,7 +48,7 @@ function InterestSection() {
               Last but not least, I do coding every day, the reason is that{" "}
               <s>I hate my life</s> it is a promising job & fun to do. Coding
               teaches me to always be patient, grateful, and consistent, because
-              "technology is never dying".
+              "technology is never die".
             </p>
           </div>
           <div className="md:h-screen md:basis-1/2 lg:pt-28 lg:pb-24 order-1 md:order-2">
