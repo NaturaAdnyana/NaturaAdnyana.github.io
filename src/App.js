@@ -53,6 +53,10 @@ function App() {
                 <Route path="certifications" element={<Certifications />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="blogs" element={<UnderContstruction />} />
+                <Route
+                  path="under-construction"
+                  element={<UnderContstruction />}
+                />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </AnimatePresence>

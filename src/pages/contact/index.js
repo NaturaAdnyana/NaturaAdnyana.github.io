@@ -136,7 +136,7 @@ function Contact() {
                 </h2>
                 <div className="tracking-widest">Drop your thoughts here.</div>
                 <form
-                  action="/"
+                  action="/under-construction"
                   className="flex flex-col w-full mt-6 lg:px-20 space-y-5"
                 >
                   <input
