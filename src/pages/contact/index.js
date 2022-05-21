@@ -47,7 +47,7 @@ function Contact() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Contact - Natura Personal Web</title>
+        <title>Contact - Natura Adnyana</title>
         <meta
           name="description"
           content="It's me Natura - Contact or Follow me for any questions or inquiries. Instagram, Github, LinkedIn, Mail, etc. are all available."

@@ -105,7 +105,7 @@ const Certifications = () => {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Certifications - Natura Personal Web</title>
+        <title>Certifications - Natura Adnyana</title>
         <meta
           name="description"
           content="It's me Natura - Here's my work/project that I made, come to check it out!"

@@ -23,7 +23,7 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet prioritizeSeoTags>
-        <title>Natura Personal Website</title>
+        <title>Natura Adnyana - Personal Website</title>
         <link rel="canonical" href="https://www.naturaadnyana.com/" />
         <meta name="author" content="Natura Adnyana"></meta>
         <meta

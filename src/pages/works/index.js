@@ -131,7 +131,7 @@ const Works = () => {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Works - Natura Personal Web</title>
+        <title>Works - Natura Adnyana</title>
         <meta
           name="description"
           content="It's me Natura - Here's my work/project that I made, come to check it out!"

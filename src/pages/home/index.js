@@ -47,10 +47,10 @@ function Home() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Home - Natura Personal Web</title>
+        <title>Natura Adnyana - Personal Website</title>
         <meta
           name="description"
-          content="It's me Natura - Aspiring Software Engineer & Front-end Web Developer & Art Lover based in Bali"
+          content="It's me Natura Adnyana - Aspiring Software Engineer & Front-end Web Developer & Art Lover based in Bali. Check my story, works, certifications, my contacts here."
         ></meta>
       </Helmet>
       <motion.div
