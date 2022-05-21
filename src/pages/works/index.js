@@ -98,7 +98,7 @@ const works = [
   {
     name: "Natura's Linktree",
     year: 2021,
-    url: "https://checkme-nat.web.app/",
+    url: "https://links.naturaadnyana.com/",
     github: "https://github.com/NaturaAdnyana/Selfmade-Likntree",
     techs: ["HTML", "CSS", "Webpack"],
     img: linkTreeNatura,
