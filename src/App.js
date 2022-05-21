@@ -28,7 +28,7 @@ function App() {
         <meta name="author" content="Natura Adnyana"></meta>
         <meta
           name="keywords"
-          content="Natura Adnyana, Bali Web Developer, Web Developer, React Developer"
+          content="Natura Adnyana, Balinese Web Developer, Web Developer, React Developer"
         ></meta>
         <meta
           name="description"
