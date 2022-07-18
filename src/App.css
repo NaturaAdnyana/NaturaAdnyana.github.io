@@ -218,3 +218,55 @@ body {
   opacity: 0.1;
   z-index: 10;
 }
+
+.glitch {
+  -webkit-animation: glitchAnimation 1s infinite;
+  -moz-animation: glitchAnimation 1s infinite;
+  -o-animation: glitchAnimation 1s infinite;
+  animation: glitchAnimation 1s infinite;
+}
+
+@keyframes glitchAnimation {
+  40% {
+    text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
+  }
+  50% {
+    text-shadow: rgba(255, 0, 0, 0.371) -10px 0, rgba(0, 255, 255, 0.322) 10px 0;
+  }
+  60% {
+    text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
+  }
+}
+@-webkit-keyframes glitchAnimation {
+  40% {
+    text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
+  }
+  50% {
+    text-shadow: rgba(255, 0, 0, 0.371) -10px 0, rgba(0, 255, 255, 0.322) 10px 0;
+  }
+  60% {
+    text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
+  }
+}
+@-moz-keyframes glitchAnimation {
+  40% {
+    text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
+  }
+  50% {
+    text-shadow: rgba(255, 0, 0, 0.371) -10px 0, rgba(0, 255, 255, 0.322) 10px 0;
+  }
+  60% {
+    text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
+  }
+}
+@-o-keyframes glitchAnimation {
+  40% {
+    text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
+  }
+  50% {
+    text-shadow: rgba(255, 0, 0, 0.371) -10px 0, rgba(0, 255, 255, 0.322) 10px 0;
+  }
+  60% {
+    text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
+  }
+}
