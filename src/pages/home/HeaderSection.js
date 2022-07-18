@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import currentMe from "./../../assets/images/2022me.webp";
 
 function HeaderSection(props) {
   return (
@@ -31,7 +32,7 @@ function HeaderSection(props) {
                   stiffness: 260,
                   damping: 20,
                 }}
-                className="absolute left w-44 lg:w-72 h-auto md:ml-6 rounded-sm cursor-grab shadow-md"
+                className="absolute left w-52 lg:w-72 h-auto md:ml-6 rounded-sm cursor-grab shadow-md"
                 src="https://cdn.jsdelivr.net/gh/NaturaAdnyana/NaturaAdnyana.github.io/src/assets/images/childme.webp"
                 alt="Child me"
               />
@@ -60,6 +61,35 @@ function HeaderSection(props) {
                 }}
                 className="absolute w-64 lg:w-96 h-auto md:mb-20 md:mr-11 rounded-sm cursor-grab shadow-md"
                 src="https://cdn.jsdelivr.net/gh/NaturaAdnyana/NaturaAdnyana.github.io/src/assets/images/2018me.webp"
+                alt="Child me"
+                width="100%"
+                height="100%"
+              />
+              <motion.img
+                initial={{ opacity: 0, rotate: 2, scale: 1.1 }}
+                animate={{
+                  rotate: 6,
+                  scale: 1,
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 3,
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                }}
+                drag
+                dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+                dragElastic={0.5}
+                whileTap={{
+                  cursor: "grabbing",
+                  zIndex: 20,
+                  transition: {
+                    delay: 0,
+                  },
+                }}
+                className="absolute w-48 lg:w-72 h-auto md:mb-20 md:mr-11 rounded-sm cursor-grab shadow-md"
+                src={currentMe}
                 alt="Child me"
                 width="100%"
                 height="100%"
