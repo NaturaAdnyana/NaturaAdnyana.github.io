@@ -62,8 +62,8 @@ function Contact() {
       >
         <motion.div variants={contentVariants}>
           <section className="text-white container mx-auto md:w-11/12 px-6 mb-20 md:mb-0">
-            <article className="flex flex-col md:flex-row overflow-hidden">
-              <div className="grow flex flex-col justify-center items-center py-20 md:h-screen">
+            <article className="flex flex-col md:flex-row">
+              <div className="grow flex flex-col space-y-5 justify-center items-center py-20 md:h-screen">
                 <div className="text-center">
                   <h2 className="text-6xl">
                     <span>FOLLOW ME</span>
@@ -72,7 +72,7 @@ function Contact() {
                     I am always open to new opportunities.
                   </div>
                 </div>
-                <div className="flex justify-center items-center mt-6 space-x-5">
+                <div className="flex justify-center items-center space-x-2 md:space-x-5">
                   <a
                     href="mailto:me@naturaadnyana.com?subject=Let's%20Collaborate&body=Hi, Let's%20make%20an%20outstanding%20project%20together%21"
                     rel="noreferrer noopener"
@@ -139,20 +139,22 @@ function Contact() {
                     </motion.div>
                   </a>
                 </div>
-                <span className="mt-6">- or -</span>
-                <h2 className="text-6xl mt-6">
-                  <span>MAKE A PLAN</span>
-                </h2>
-                <div className="tracking-widest mt-1">
-                  <a
-                    href="https://calendly.com/natura-adn"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Click here
-                  </a>{" "}
-                  to schedule our meeting.
+                <span>- or -</span>
+                <div className="text-center">
+                  <h2 className="text-6xl">
+                    <span>MAKE A PLAN</span>
+                  </h2>
+                  <div className="tracking-widest mt-1">
+                    <a
+                      href="https://calendly.com/natura-adn"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="text-blue-500 hover:underline"
+                    >
+                      Click here
+                    </a>{" "}
+                    to schedule our meeting.
+                  </div>
                 </div>
               </div>
               <div className="hidden grow-0 lg:flex flex-row space-y-1">
