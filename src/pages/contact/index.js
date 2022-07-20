@@ -7,6 +7,7 @@ import InstagramIcon from "../../assets/icons/InstagramIcon";
 import LinkedInIcon from "../../assets/icons/LinkedInIcon";
 import OutlineBtn from "../../shared/OutlineBtn";
 import AirplaneIcon from "../../assets/icons/AirplaneIcon";
+import TwitterIcon from "../../assets/icons/TwitterIcon";
 
 const containerVariants = {
   hidden: {
@@ -67,7 +68,7 @@ function Contact() {
                   <h2 className="text-6xl">
                     <span>FOLLOW ME</span>
                   </h2>
-                  <div className="tracking-widest">
+                  <div className="tracking-widest mt-1">
                     I am always open to new opportunities.
                   </div>
                 </div>
@@ -124,6 +125,34 @@ function Contact() {
                       <LinkedInIcon className="fill-black w-8 h-8 group-hover:fill-white" />
                     </motion.div>
                   </a>
+                  <a
+                    href="https://twitter.com/Natkun_"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: 1 }}
+                      className="group p-3 transition-colors bg-white rounded-full flex justify-center items-center hover:bg-black"
+                    >
+                      <TwitterIcon className="fill-black w-8 h-8 group-hover:fill-white" />
+                    </motion.div>
+                  </a>
+                </div>
+                <span className="mt-6">- or -</span>
+                <h2 className="text-6xl mt-6">
+                  <span>MAKE A PLAN</span>
+                </h2>
+                <div className="tracking-widest mt-1">
+                  <a
+                    href="https://calendly.com/natura-adn"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-blue-500 hover:underline"
+                  >
+                    Click here
+                  </a>{" "}
+                  to schedule our meeting.
                 </div>
               </div>
               <div className="hidden grow-0 lg:flex flex-row space-y-1">
@@ -134,7 +163,9 @@ function Contact() {
                 <h2 className="text-6xl">
                   <span>CONTACT ME</span>
                 </h2>
-                <div className="tracking-widest">Drop your thoughts here.</div>
+                <div className="tracking-widest mt-1">
+                  Drop your thoughts here.
+                </div>
                 <form
                   action="/under-construction"
                   className="flex flex-col w-full mt-6 lg:px-20 space-y-5"
