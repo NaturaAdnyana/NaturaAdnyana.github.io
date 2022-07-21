@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     if (typeof Storage !== "undefined") {
-      if (localStorage.getItem(CACHE_KEY) !== "undefined") {
+      if (localStorage.getItem(CACHE_KEY)) {
         setUsername(localStorage.getItem(CACHE_KEY));
         setPopUps(true);
         setTimeout(() => {
