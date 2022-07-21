@@ -5,9 +5,8 @@ import MailIcon from "../../assets/icons/MailIcon";
 import GithubIcon from "../../assets/icons/GithubIcon";
 import InstagramIcon from "../../assets/icons/InstagramIcon";
 import LinkedInIcon from "../../assets/icons/LinkedInIcon";
-import OutlineBtn from "../../shared/OutlineBtn";
-import AirplaneIcon from "../../assets/icons/AirplaneIcon";
 import TwitterIcon from "../../assets/icons/TwitterIcon";
+import ContactMeForm from "./ContactMeForm";
 
 const containerVariants = {
   hidden: {
@@ -168,26 +167,7 @@ function Contact() {
                 <div className="tracking-widest mt-1">
                   Drop your thoughts here.
                 </div>
-                <form
-                  action="/under-construction"
-                  className="flex flex-col w-full mt-6 lg:px-20 space-y-5"
-                >
-                  <input
-                    className="p-2 rounded-lg text-black"
-                    type="text"
-                    placeholder="Your name here..."
-                  />
-                  <textarea
-                    className="p-2 rounded-lg text-black"
-                    type="text"
-                    placeholder="Your thoughts here..."
-                  />
-                  <button type="submit">
-                    <OutlineBtn hint="Send">
-                      <AirplaneIcon className="w-6 h-6 inline ml-2 -translate-y-1 rotate-45 transition-all group-hover:rotate-90  group-hover:translate-y-0 group-hover:translate-x-1" />
-                    </OutlineBtn>
-                  </button>
-                </form>
+                <ContactMeForm />
               </div>
             </article>
           </section>

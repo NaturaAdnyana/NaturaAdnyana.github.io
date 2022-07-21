@@ -1,10 +1,12 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import LoadingPage from "./components/LoadingPage";
 import MobileNavbar from "./components/MobileNavbar";
 import { AnimatePresence } from "framer-motion";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import InWebNotification from "./shared/InWebNotification";
+import { useState } from "react";
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -19,6 +21,23 @@ const UnderContstruction = React.lazy(() =>
 
 function App() {
   const location = useLocation();
+
+  const CACHE_KEY = "USERNAME";
+
+  const [popUps, setPopUps] = useState(false);
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    if (typeof Storage !== "undefined") {
+      if (localStorage.getItem(CACHE_KEY) !== "undefined") {
+        setUsername(localStorage.getItem(CACHE_KEY));
+        setPopUps(true);
+        setTimeout(() => {
+          setPopUps(false);
+        }, 10000);
+      }
+    }
+  }, []);
 
   return (
     <HelmetProvider>
@@ -64,6 +83,11 @@ function App() {
           <footer>
             <Footer />
           </footer>
+          <AnimatePresence>
+            {popUps && (
+              <InWebNotification message={`Welcome back ${username} 👋`} />
+            )}
+          </AnimatePresence>
         </Suspense>
       </div>
     </HelmetProvider>
