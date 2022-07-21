@@ -29,7 +29,7 @@ const InWebNotification = ({ message, className }) => {
       exit="exit"
       className={`absolute top-2 inset-x-0 mx-auto max-w-md px-6 ${className}`}
     >
-      <div className="p-3 rounded-xl text-gray-900 shadow-md bg-white text-center">
+      <div className="p-3 rounded-xl text-gray-900 shadow-md bg-white text-center truncate">
         {message}
       </div>
     </motion.div>
