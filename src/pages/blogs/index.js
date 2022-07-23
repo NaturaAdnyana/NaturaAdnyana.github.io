@@ -1,6 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import ReadModeIntro from "./ReadModeIntro.js";
 
 const containerVariants = {
   hidden: {
@@ -28,7 +29,6 @@ const contentVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 1,
       duration: 1.5,
     },
   },
@@ -38,6 +38,12 @@ const contentVariants = {
 };
 
 const Blogs = () => {
+  const [isIntro, setIsIntro] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsIntro(false);
+    }, 3000);
+  }, []);
   return (
     <HelmetProvider>
       <Helmet>
@@ -48,14 +54,18 @@ const Blogs = () => {
         ></meta>
       </Helmet>
       <motion.div
+        className="overflow-x-hidden"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
+        <AnimatePresence>{isIntro && <ReadModeIntro />}</AnimatePresence>
         <motion.div variants={contentVariants}>
-          <section className="text-white container mx-auto md:w-11/12 px-6 mb-20 md:mb-0">
-            <article className="flex flex-col md:flex-row border border-white h-screen"></article>
+          <section className="text-black container mx-auto md:w-11/12 px-6 mb-20 md:mb-0">
+            <article className="flex flex-col justify-center items-center md:flex-row h-screen">
+              <h1>Under Construction</h1>
+            </article>
           </section>
         </motion.div>
       </motion.div>
