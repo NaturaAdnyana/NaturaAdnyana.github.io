@@ -24,12 +24,20 @@ const pathVariants = {
       ease: "easeInOut",
     },
   },
+  visibleDark: {
+    fill: "rgba(0, 0, 0, 1)",
+    pathLength: 1,
+    transition: {
+      duration: 1.5,
+      ease: "easeInOut",
+    },
+  },
   exit: {
     fill: "rgba(255, 255, 255, 0)",
   },
 };
 
-function Logo(props) {
+function Logo({ isReadMode, className }) {
   return (
     <>
       <motion.svg
@@ -37,8 +45,8 @@ function Logo(props) {
         viewBox="0 0 263.85 221.49"
         variants={svgVariants}
         initial="hidden"
-        animate="visible"
-        {...props}
+        animate={isReadMode ? "visibleDark" : "visible"}
+        className={className}
       >
         <motion.path
           className="cls-1 stroke-2 stroke-white"

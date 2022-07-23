@@ -146,6 +146,7 @@ const Certifications = () => {
                   {certifications.map(({ name, year, img }) => {
                     return (
                       <motion.div
+                        key={name}
                         className="border overflow-hidden h-60 rounded-md relative"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}

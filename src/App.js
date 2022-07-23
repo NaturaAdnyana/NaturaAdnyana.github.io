@@ -5,8 +5,9 @@ import LoadingPage from "./components/LoadingPage";
 import MobileNavbar from "./components/MobileNavbar";
 import { AnimatePresence } from "framer-motion";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import InWebNotification from "./shared/InWebNotification";
+import InWebNotification from "./components/InWebNotification";
 import { useState } from "react";
+import Blogs from "./pages/blogs";
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -71,7 +72,7 @@ function App() {
                 <Route path="works" element={<Works />} />
                 <Route path="certifications" element={<Certifications />} />
                 <Route path="contact" element={<Contact />} />
-                <Route path="blogs" element={<UnderContstruction />} />
+                <Route path="blogs" element={<Blogs />} />
                 <Route
                   path="under-construction"
                   element={<UnderContstruction />}

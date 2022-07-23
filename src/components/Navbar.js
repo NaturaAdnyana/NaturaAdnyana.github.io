@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ArrowRight from "../assets/icons/ArrowRight";
 import Logo from "../assets/icons/Logo";
 import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 const containerVariants = {
   hidden: {},
@@ -35,6 +36,10 @@ const scrollArrowVariants = {
 };
 
 function Navbar() {
+  const location = useLocation();
+
+  const [isReadMode, setIsReadMode] = useState(false);
+
   const [isBottom, setIsBottom] = useState(false);
   window.onscroll = function (e) {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
@@ -50,6 +55,14 @@ function Navbar() {
     });
   };
 
+  useEffect(() => {
+    if (location.pathname === "/blogs") {
+      setIsReadMode(true);
+    } else {
+      setIsReadMode(false);
+    }
+  }, [location]);
+
   return (
     <motion.nav
       className="md:flex hidden py-6 fixed top-0 right-0 h-screen text-sm items-center px-10 flex-col"
@@ -58,11 +71,13 @@ function Navbar() {
       animate="visible"
     >
       <Link className="hover:opacity-50 transition-opacity" to="/">
-        <Logo className="w-10 h-10" />
+        <Logo isReadMode={isReadMode} className="w-10 h-10" />
         <span className="sr-only">Natura Logo</span>
       </Link>
       <ul
-        className="absolute top-64 pl-8 flex rotate-90 space-x-7 text-white"
+        className={`absolute top-64 pl-8 flex rotate-90 space-x-7 ${
+          isReadMode ? "text-black" : "text-white"
+        }`}
         variants={navMenuVariants}
       >
         <motion.li variants={navMenuVariants}>
@@ -107,7 +122,9 @@ function Navbar() {
         >
           {!isBottom && (
             <motion.div
-              className="rotate-90 text-white"
+              className={`rotate-90 ${
+                isReadMode ? "text-black" : "text-white"
+              }`}
               variants={scrollArrowVariants}
               initial="hidden"
               animate="visible"

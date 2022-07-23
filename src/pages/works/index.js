@@ -175,6 +175,7 @@ const Works = () => {
                   {works.map(({ name, year, url, github, techs, img }) => {
                     return (
                       <motion.div
+                        key={name}
                         className="group relative rounded-md overflow-hidden transition-all border"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
