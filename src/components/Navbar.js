@@ -39,8 +39,8 @@ function Navbar() {
   const location = useLocation();
 
   const [isReadMode, setIsReadMode] = useState(false);
-
   const [isBottom, setIsBottom] = useState(false);
+
   window.onscroll = function (e) {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
       setIsBottom(true);
@@ -65,7 +65,7 @@ function Navbar() {
 
   return (
     <motion.nav
-      className="md:flex hidden py-6 fixed top-0 right-0 h-screen text-sm items-center px-10 flex-col"
+      className="z-40 md:flex hidden py-6 fixed top-0 right-0 h-screen text-sm items-center px-10 flex-col"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

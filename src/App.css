@@ -84,13 +84,13 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  -webkit-animation: AnimationName 3s ease infinite;
-  -moz-animation: AnimationName 3s ease infinite;
-  -o-animation: AnimationName 3s ease infinite;
-  animation: AnimationName 3s ease infinite;
+  -webkit-animation: MovingGradient 3s ease infinite;
+  -moz-animation: MovingGradient 3s ease infinite;
+  -o-animation: MovingGradient 3s ease infinite;
+  animation: MovingGradient 3s ease infinite;
 }
 
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes MovingGradient {
   0% {
     background-position: 25% 0%;
   }
@@ -101,7 +101,7 @@ body {
     background-position: 25% 0%;
   }
 }
-@-moz-keyframes AnimationName {
+@-moz-keyframes MovingGradient {
   0% {
     background-position: 25% 0%;
   }
@@ -112,7 +112,7 @@ body {
     background-position: 25% 0%;
   }
 }
-@-o-keyframes AnimationName {
+@-o-keyframes MovingGradient {
   0% {
     background-position: 25% 0%;
   }
@@ -123,7 +123,7 @@ body {
     background-position: 25% 0%;
   }
 }
-@keyframes AnimationName {
+@keyframes MovingGradient {
   0% {
     background-position: 25% 0%;
   }
@@ -270,4 +270,8 @@ body {
   60% {
     text-shadow: rgba(255, 0, 0, 0.711) -5px 0, rgba(0, 255, 255, 0.678) 5px 0;
   }
+}
+
+.bg-less-transparent {
+  background-color: rgba(255, 255, 255, 0.3);
 }
