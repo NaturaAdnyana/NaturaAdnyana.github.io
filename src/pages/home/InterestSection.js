@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function InterestSection() {
   return (
     <>
-      <section className="md:h-screen text-white bg-shadow py-5 md:pt-10 md:pb-14">
+      <section className="md:h-screen text-white bg-shadow-end py-5 md:pt-10 md:pb-14">
         <motion.article
           className="md:h-full md:pr-10 flex flex-col md:flex-row lg:container mx-auto lg:w-11/12 md:px-6"
           initial={{ opacity: 0 }}

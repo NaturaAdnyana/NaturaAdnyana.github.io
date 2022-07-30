@@ -29,7 +29,7 @@ function IntroSection() {
 
   return (
     <>
-      <section className="md:h-screen text-white bg-shadow pt-10 pb-5 md:pb-14">
+      <section className="md:h-screen text-white bg-shadow-start pt-10 pb-5 md:pb-14">
         <motion.article
           className="md:h-full md:pr-14 flex flex-col md:flex-row container mx-auto md:w-11/12 px-6"
           initial={{ opacity: 0 }}

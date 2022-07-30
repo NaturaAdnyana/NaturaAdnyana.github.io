@@ -149,9 +149,29 @@ body {
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.6951155462184874) 26%,
-    rgba(0, 0, 0, 0.6951155462184874) 75%,
+    rgba(0, 0, 0, 0.6) 26%,
+    rgba(0, 0, 0, 0.6) 75%,
     rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.bg-shadow-start {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 26%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.bg-shadow-end {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 26%,
+    rgba(0, 0, 0, 0.6) 100%
   );
 }
 
