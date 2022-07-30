@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import ArrowRight from "../assets/icons/ArrowRight";
 import Logo from "../assets/icons/Logo";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,7 +35,7 @@ const scrollArrowVariants = {
   },
 };
 
-function Navbar() {
+function Navbar(props) {
   const location = useLocation();
 
   const [isReadMode, setIsReadMode] = useState(false);
@@ -70,10 +70,10 @@ function Navbar() {
       initial="hidden"
       animate="visible"
     >
-      <Link className="hover:opacity-50 transition-opacity" to="/">
+      <NavLink className="hover:opacity-50 transition-opacity" to="/">
         <Logo isReadMode={isReadMode} className="w-10 h-10" />
         <span className="sr-only">Natura Logo</span>
-      </Link>
+      </NavLink>
       <ul
         className={`absolute top-64 pl-8 flex rotate-90 space-x-7 ${
           isReadMode ? "text-black" : "text-white"
@@ -81,32 +81,64 @@ function Navbar() {
         variants={navMenuVariants}
       >
         <motion.li variants={navMenuVariants}>
-          <Link className="hover:opacity-50 transition-opacity" to="/">
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "font-bold hover:opacity-50 transition-opacity"
+                : "hover:opacity-50 transition-opacity";
+            }}
+            to="/"
+          >
             Home
-          </Link>
+          </NavLink>
         </motion.li>
         <motion.li variants={navMenuVariants}>
-          <Link className="hover:opacity-50 transition-opacity" to="/works">
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "font-bold hover:opacity-50 transition-opacity"
+                : "hover:opacity-50 transition-opacity";
+            }}
+            to="/works"
+          >
             Works
-          </Link>
+          </NavLink>
         </motion.li>
         <motion.li variants={navMenuVariants}>
-          <Link className="hover:opacity-50 transition-opacity" to="/blogs">
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "font-bold hover:opacity-50 transition-opacity"
+                : "hover:opacity-50 transition-opacity";
+            }}
+            to="/blogs"
+          >
             Blogs
-          </Link>
+          </NavLink>
         </motion.li>
         <motion.li variants={navMenuVariants}>
-          <Link
-            className="hover:opacity-50 transition-opacity"
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "font-bold hover:opacity-50 transition-opacity"
+                : "hover:opacity-50 transition-opacity";
+            }}
             to="/certifications"
           >
             Certifications
-          </Link>
+          </NavLink>
         </motion.li>
         <motion.li variants={navMenuVariants}>
-          <Link className="hover:opacity-50 transition-opacity" to="/contact">
+          <NavLink
+            className={({ isActive }) => {
+              return isActive
+                ? "font-bold hover:opacity-50 transition-opacity"
+                : "hover:opacity-50 transition-opacity";
+            }}
+            to="/contact"
+          >
             Contact
-          </Link>
+          </NavLink>
         </motion.li>
       </ul>
 
