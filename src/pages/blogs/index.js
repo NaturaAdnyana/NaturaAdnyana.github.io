@@ -107,7 +107,7 @@ const Blogs = () => {
               <Link to="#" className="group">
                 <motion.div
                   // key={}
-                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105"
+                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105 shadow"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -127,7 +127,7 @@ const Blogs = () => {
               <Link to="#" className="group">
                 <motion.div
                   // key={}
-                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105"
+                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105 shadow"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -147,7 +147,7 @@ const Blogs = () => {
               <Link to="#" className="group">
                 <motion.div
                   // key={}
-                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105"
+                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105 shadow"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -167,7 +167,7 @@ const Blogs = () => {
               <Link to="#" className="group">
                 <motion.div
                   // key={}
-                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105"
+                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105 shadow"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -187,7 +187,7 @@ const Blogs = () => {
               <Link to="#" className="group">
                 <motion.div
                   // key={}
-                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105"
+                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105 shadow"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -207,7 +207,7 @@ const Blogs = () => {
               <Link to="#" className="group">
                 <motion.div
                   // key={}
-                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105"
+                  className="overflow-hidden h-60 rounded-md relative transition-transform group-hover:scale-105 shadow"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
