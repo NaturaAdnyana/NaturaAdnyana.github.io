@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import ReadModeIntro from "./ReadModeIntro.js";
 import axios from "axios";
 import BlogCard from "./BlogCard.js";
+import { Link } from "react-router-dom";
 
 const containerVariants = {
   hidden: {
@@ -42,12 +43,14 @@ const contentVariants = {
 const Blogs = () => {
   const [isIntro, setIsIntro] = useState(true);
   const [isHeadingAtTop, setIsHeadingAtTop] = useState(false);
-  const [allBlogs, setAllBlogs] = useState();
+  const [allBlogs, setAllBlogs] = useState("");
   const headingElm = useRef();
 
   function getAllBlogs() {
     axios
-      .get(`https://naturaadnyana-backend.herokuapp.com/api/blogs`)
+      .get(
+        `${process.env.REACT_APP_PERSONAL_API_ENDPOINT}/api/blogs?populate=*`
+      )
       .then((response) => response.data)
       .then((data) => {
         setAllBlogs(data);
@@ -123,8 +126,14 @@ const Blogs = () => {
               {!allBlogs ? (
                 <div>Loading...</div>
               ) : (
-                allBlogs.data.map((blog) => (
-                  <BlogCard blog={blog} key={blog.id} />
+                allBlogs.data.map((blog, index) => (
+                  <Link
+                    to={`/blogs/${blog.attributes.slug}`}
+                    className="group"
+                    key={index}
+                  >
+                    <BlogCard blog={blog} />
+                  </Link>
                 ))
               )}
             </article>

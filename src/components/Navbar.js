@@ -56,7 +56,6 @@ function Navbar(props) {
   };
 
   useEffect(() => {
-    console.log(location);
     if (location.pathname.includes("/blogs")) {
       setIsReadMode(true);
     } else {
