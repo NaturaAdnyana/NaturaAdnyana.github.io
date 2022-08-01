@@ -77,8 +77,8 @@ const Blogs = () => {
         <AnimatePresence>{isIntro && <ReadModeIntro />}</AnimatePresence>
         <motion.div variants={contentVariants}>
           <section className="text-black container mx-auto md:w-11/12 px-6 mb-20 md:mb-0">
-            <article className="flex flex-col items-center md:flex-row h-screen-0.4">
-              <div className="w-full h-full flex justify-center items-center flex-col space-y-8 text-center relative">
+            <article className="flex flex-col items-center md:flex-row pt-28 pb-5">
+              <div className="w-full h-full flex justify-end items-center flex-col space-y-8 text-center relative">
                 <div ref={headingElm}>
                   <div
                     className={
