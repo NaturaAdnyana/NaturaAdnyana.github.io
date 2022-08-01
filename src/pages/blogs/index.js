@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import ReadModeIntro from "./ReadModeIntro.js";
-import posIndo from "./../../assets/images/2018me.webp";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import BlogCard from "./BlogCard.js";
 
 const containerVariants = {
   hidden: {
@@ -42,12 +42,28 @@ const contentVariants = {
 const Blogs = () => {
   const [isIntro, setIsIntro] = useState(true);
   const [isHeadingAtTop, setIsHeadingAtTop] = useState(false);
+  const [allBlogs, setAllBlogs] = useState();
   const headingElm = useRef();
+
+  function getAllBlogs() {
+    axios
+      .get(`https://naturaadnyana-backend.herokuapp.com/api/blogs`)
+      .then((response) => response.data)
+      .then((data) => {
+        setAllBlogs(data);
+      })
+      .catch((err) => console.log(err))
+      .finally(() => {
+        console.log(allBlogs);
+      });
+  }
 
   useEffect(() => {
     setTimeout(() => {
       setIsIntro(false);
     }, 3000);
+    getAllBlogs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   window.onscroll = function (e) {
@@ -76,7 +92,7 @@ const Blogs = () => {
       >
         <AnimatePresence>{isIntro && <ReadModeIntro />}</AnimatePresence>
         <motion.div variants={contentVariants}>
-          <section className="text-black container mx-auto md:w-11/12 px-6 mb-20 md:mb-0">
+          <section className="text-black container mx-auto md:w-11/12 px-6 mb-20 min-h-screen">
             <article className="flex flex-col items-center md:flex-row pt-28 pb-5">
               <div className="w-full h-full flex justify-end items-center flex-col space-y-8 text-center relative">
                 <div ref={headingElm}>
@@ -104,126 +120,13 @@ const Blogs = () => {
               </div>
             </article>
             <article className="lg:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              <Link to="#" className="group">
-                <motion.div
-                  // key={}
-                  className="overflow-hidden h-60 rounded-sm relative transition-transform group-hover:scale-105 shadow"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <img
-                    src={posIndo}
-                    alt={"babi"}
-                    className="transition-transform"
-                  />
-                  <div className="w-full p-4 bg-white absolute bottom-0 space-y-3  text-center">
-                    <h3 className="font-xl font-bold">Lorem Ipsum</h3>
-                    <h4 className="text-xs">17/03/2022 - 0 Comments</h4>
-                  </div>
-                </motion.div>
-              </Link>
-              <Link to="#" className="group">
-                <motion.div
-                  // key={}
-                  className="overflow-hidden h-60 rounded-sm relative transition-transform group-hover:scale-105 shadow"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <img
-                    src={posIndo}
-                    alt={"babi"}
-                    className="transition-transform"
-                  />
-                  <div className="w-full p-4 bg-white absolute bottom-0 space-y-3  text-center">
-                    <h3 className="font-xl font-bold">Lorem Ipsum</h3>
-                    <h4 className="text-xs">17/03/2022 - 0 Comments</h4>
-                  </div>
-                </motion.div>
-              </Link>
-              <Link to="#" className="group">
-                <motion.div
-                  // key={}
-                  className="overflow-hidden h-60 rounded-sm relative transition-transform group-hover:scale-105 shadow"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <img
-                    src={posIndo}
-                    alt={"babi"}
-                    className="transition-transform"
-                  />
-                  <div className="w-full p-4 bg-white absolute bottom-0 space-y-3  text-center">
-                    <h3 className="font-xl font-bold">Lorem Ipsum</h3>
-                    <h4 className="text-xs">17/03/2022 - 0 Comments</h4>
-                  </div>
-                </motion.div>
-              </Link>
-              <Link to="#" className="group">
-                <motion.div
-                  // key={}
-                  className="overflow-hidden h-60 rounded-sm relative transition-transform group-hover:scale-105 shadow"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <img
-                    src={posIndo}
-                    alt={"babi"}
-                    className="transition-transform"
-                  />
-                  <div className="w-full p-4 bg-white absolute bottom-0 space-y-3  text-center">
-                    <h3 className="font-xl font-bold">Lorem Ipsum</h3>
-                    <h4 className="text-xs">17/03/2022 - 0 Comments</h4>
-                  </div>
-                </motion.div>
-              </Link>
-              <Link to="#" className="group">
-                <motion.div
-                  // key={}
-                  className="overflow-hidden h-60 rounded-sm relative transition-transform group-hover:scale-105 shadow"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <img
-                    src={posIndo}
-                    alt={"babi"}
-                    className="transition-transform"
-                  />
-                  <div className="w-full p-4 bg-white absolute bottom-0 space-y-3  text-center">
-                    <h3 className="font-xl font-bold">Lorem Ipsum</h3>
-                    <h4 className="text-xs">17/03/2022 - 0 Comments</h4>
-                  </div>
-                </motion.div>
-              </Link>
-              <Link to="#" className="group">
-                <motion.div
-                  // key={}
-                  className="overflow-hidden h-60 rounded-sm relative transition-transform group-hover:scale-105 shadow"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <img
-                    src={posIndo}
-                    alt={"babi"}
-                    className="transition-transform"
-                  />
-                  <div className="w-full p-4 bg-white absolute bottom-0 space-y-3  text-center">
-                    <h3 className="font-xl font-bold">Lorem Ipsum</h3>
-                    <h4 className="text-xs">17/03/2022 - 0 Comments</h4>
-                  </div>
-                </motion.div>
-              </Link>
+              {!allBlogs ? (
+                <div>Loading...</div>
+              ) : (
+                allBlogs.data.map((blog) => (
+                  <BlogCard blog={blog} key={blog.id} />
+                ))
+              )}
             </article>
           </section>
         </motion.div>

@@ -8,6 +8,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import InWebNotification from "./components/InWebNotification";
 import { useState } from "react";
 import Blogs from "./pages/blogs";
+import Blog from "./components/Blog";
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -73,6 +74,7 @@ function App() {
                 <Route path="certifications" element={<Certifications />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="blogs" element={<Blogs />} />
+                <Route path="blogs/:id" element={<Blog />} />
                 <Route
                   path="under-construction"
                   element={<UnderContstruction />}
