@@ -86,11 +86,11 @@ const Blogs = () => {
       >
         <AnimatePresence>{isIntro && <ReadModeIntro />}</AnimatePresence>
         <motion.div variants={contentVariants}>
-          <section className="text-black container mx-auto md:w-11/12 px-6 mb-20 min-h-screen">
+          <section className="text-black container mx-auto md:w-11/12 px-6 mb-20 h-screen-1">
             <article className="flex flex-col items-center md:flex-row pt-28 pb-5">
               <BlogHeader />
             </article>
-            <article className="lg:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <article className="pt-10 pb-20 lg:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {!allBlogs ? (
                 <div>Loading...</div>
               ) : (

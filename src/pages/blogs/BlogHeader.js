@@ -1,21 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 const BlogHeader = (props) => {
   const headingElm = useRef();
   const [isHeadingAtTop, setIsHeadingAtTop] = useState(false);
 
-  useEffect(() => {
+  window.onscroll = function (e) {
     if (!props.justSticky) {
-      window.onscroll = function (e) {
-        if (headingElm.current.getBoundingClientRect().y < 0) {
-          setIsHeadingAtTop(true);
-        } else {
-          setIsHeadingAtTop(false);
-        }
-      };
+      if (headingElm.current.getBoundingClientRect().y < 0) {
+        setIsHeadingAtTop(true);
+      } else {
+        setIsHeadingAtTop(false);
+      }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  };
 
   return (
     <>
