@@ -6,7 +6,9 @@ import axios from "axios";
 import { showFormattedDate, countComments } from "../../utils";
 import Calendar from "../../assets/icons/Calendar";
 import ChatBubble from "../../assets/icons/ChatBubble";
+import AirplaneIcon from "../../assets/icons/AirplaneIcon";
 import BlogHeader from "./BlogHeader";
+import OutlineBtn from "../../shared/OutlineBtn";
 
 const containerVariants = {
   hidden: {
@@ -117,8 +119,28 @@ const Blog = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="md:float-right md:w-3/4 p-8 space-y-2">
+                    <div className="md:float-right md:w-3/4 p-8 space-y-4">
                       <h2>Comments</h2>
+                      <form action="" className="flex flex-col space-y-4 pb-5">
+                        <input
+                          type="text"
+                          className="p-2 rounded-md"
+                          placeholder="your name..."
+                          required
+                        />
+                        <textarea
+                          name=""
+                          id=""
+                          className="h-20 p-2 rounded-md"
+                          placeholder="your comment..."
+                          required
+                        ></textarea>
+                        <button type="submit">
+                          <OutlineBtn readMode={true} hint="Send">
+                            <AirplaneIcon className="w-6 h-6 inline ml-2 -translate-y-1 rotate-45 transition-all group-hover:rotate-90  group-hover:translate-y-0 group-hover:translate-x-1" />
+                          </OutlineBtn>
+                        </button>
+                      </form>
                       {blog.attributes.comments.data.map((comment, index) => (
                         <div
                           className="chat-bubble bg-white p-5 rounded-lg"
