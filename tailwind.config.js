@@ -7,6 +7,7 @@ module.exports = {
         "10xl": ["10rem", "1"],
       },
       height: {
+        18: "4.5rem",
         "1/7": "14.28571428571429%",
         "screen-0.4": "40vh",
         "screen-0.5": "50vh",

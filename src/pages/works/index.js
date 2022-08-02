@@ -230,7 +230,7 @@ const Works = () => {
                         >
                           <div className="absolute p-5 z-10">
                             {deviceWidth < 768 && (
-                              <div className="mb-5 opacity-50 text-xs flex flex-wrap">
+                              <div className="h-18 overflow-y-auto mb-5 opacity-50 text-xs flex flex-wrap">
                                 {techs.map((tech) => {
                                   return (
                                     <div
