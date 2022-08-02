@@ -7,8 +7,8 @@ import { AnimatePresence } from "framer-motion";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import InWebNotification from "./components/InWebNotification";
 import { useState } from "react";
-import Blogs from "./pages/blogs";
-import Blog from "./pages/blogs/Blog";
+// import Blogs from "./pages/blogs";
+// import Blog from "./pages/blogs/Blog";
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -16,6 +16,8 @@ const Home = React.lazy(() => import("./pages/home"));
 const Works = React.lazy(() => import("./pages/works"));
 const Certifications = React.lazy(() => import("./pages/certifications"));
 const Contact = React.lazy(() => import("./pages/contact"));
+const Blogs = React.lazy(() => import("./pages/blogs"));
+const Blog = React.lazy(() => import("./pages/blogs/Blog"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 const UnderContstruction = React.lazy(() =>
   import("./pages/UnderContstruction")

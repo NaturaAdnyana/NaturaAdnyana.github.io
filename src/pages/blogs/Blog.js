@@ -7,7 +7,6 @@ import { showFormattedDate, countComments, setLocalStorage } from "../../utils";
 import Calendar from "../../assets/icons/Calendar";
 import ChatBubble from "../../assets/icons/ChatBubble";
 import AirplaneIcon from "../../assets/icons/AirplaneIcon";
-import BlogHeader from "./BlogHeader";
 import OutlineBtn from "../../shared/OutlineBtn";
 import SuccessIcon from "../../assets/icons/SuccessIcon";
 import FailedIcon from "../../assets/icons/FailedIcon";
@@ -132,19 +131,18 @@ const Blog = () => {
       >
         <motion.div variants={contentVariants}>
           <section className="text-black container md:w-11/12 lg:pl-24 mb-20 min-h-screen">
-            <article className="flex flex-col lg:flex-row items-center md:flex-row pt-20 pb-5">
-              <BlogHeader justSticky={true} />
+            <article className="flex flex-col lg:flex-row items-center md:flex-row md:pt-24 pb-5">
               {!blog ? (
                 <div>Loading</div>
               ) : (
                 blog.data.map((blog, index) => (
                   <div key={index}>
                     <img
-                      className="w-full h-64 object-cover object-center mt-1"
+                      className="w-full max-h-64 object-cover object-center"
                       src={blog.attributes.file1.data.attributes.url}
                       alt={blog.attributes.title}
                     />
-                    <div className="relative pt-5 flex flex-col-reverse md:flex-row md:gap-8">
+                    <div className="pt-5 flex flex-col-reverse md:flex-row md:gap-8">
                       <div className="md:basis-1/4 p-8">
                         <div className="flex gap-2">
                           <Calendar className="w-4 h-4" />
