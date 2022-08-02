@@ -8,7 +8,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import InWebNotification from "./components/InWebNotification";
 import { useState } from "react";
 import Blogs from "./pages/blogs";
-import Blog from "./components/Blog";
+import Blog from "./pages/blogs/Blog";
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));

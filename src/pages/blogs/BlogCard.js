@@ -1,25 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { showFormattedDate, countComments } from "../../utils";
 
 const BlogCard = ({ blog }) => {
-  const API_ENDPOINT = process.env.REACT_APP_PERSONAL_API_ENDPOINT;
-  const showFormattedDate = (date) => {
-    const options = {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    };
-    return new Date(date).toLocaleDateString("id-ID", options);
-  };
-
-  const countComments = (comments) => {
-    return comments.length;
-  };
-
-  const thumbnail =
-    API_ENDPOINT + blog.attributes.file1.data.attributes.formats.small.url;
-
   return (
     <motion.div
       className="overflow-hidden h-60 rounded-sm relative transition-transform group-hover:scale-105 shadow"
@@ -29,7 +12,7 @@ const BlogCard = ({ blog }) => {
       transition={{ delay: 0.5 }}
     >
       <img
-        src={thumbnail}
+        src={blog.attributes.file1.data.attributes.formats.small.url}
         alt={blog.attributes.title}
         className="transition-transform"
       />
