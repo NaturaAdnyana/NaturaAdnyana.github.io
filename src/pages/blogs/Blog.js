@@ -48,6 +48,9 @@ const contentVariants = {
 
 const Blog = () => {
   const [blog, setBlog] = useState("");
+  const [blogHelmet, setBlogHelmet] = useState({
+    title: "Blog",
+  });
   const [formData, setFormData] = useState({
     name: "",
     comment: "",
@@ -61,21 +64,20 @@ const Blog = () => {
   let { id } = useParams();
   const API_ENDPOINT = process.env.REACT_APP_PERSONAL_API_ENDPOINT;
 
-  function getBlogData() {
-    axios
-      .get(
-        `${API_ENDPOINT}/api/blogs?filters[slug][$eq]=${id}&populate=*
-      `
-      )
-      .then((response) => response.data)
-      .then((data) => {
-        setBlog(data);
-      })
-      .catch((err) => console.log(err))
-      .finally(() => {
-        // console.log(blog);
-      });
-  }
+  const getBlogData = async () => {
+    try {
+      axios
+        .get(`${API_ENDPOINT}/api/blogs?filters[slug][$eq]=${id}&populate=*`)
+        .then((response) => {
+          setBlog(response.data);
+          setBlogHelmet({
+            title: response.data.data[0].attributes.title,
+          });
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   function handleCommentSubmit(e) {
     e.preventDefault();
@@ -119,11 +121,7 @@ const Blog = () => {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>Blogs - Natura Adnyana</title>
-        <meta
-          name="description"
-          content="It's me Natura - I'm also made blogs lol"
-        ></meta>
+        <title>{blogHelmet.title} - Natura Adnyana</title>
       </Helmet>
       <motion.div
         className="overflow-x-hidden"
