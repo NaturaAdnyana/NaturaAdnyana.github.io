@@ -46,6 +46,16 @@ const contentVariants = {
 
 const Blog = () => {
   const [blog, setBlog] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    comment: "",
+    blog: "",
+  });
+  const [submitBtnStatus, setSubmitBtnStatus] = useState({
+    loading: false,
+    success: false,
+    error: false,
+  });
   let { id } = useParams();
   const API_ENDPOINT = process.env.REACT_APP_PERSONAL_API_ENDPOINT;
 
@@ -61,9 +71,43 @@ const Blog = () => {
       })
       .catch((err) => console.log(err))
       .finally(() => {
-        console.log(blog);
+        // console.log(blog);
       });
   }
+
+  function handleCommentSubmit(e) {
+    e.preventDefault();
+
+    const formatData = {
+      data: {
+        name: formData.name,
+        comment: formData.comment,
+        blog: formData.blog,
+      },
+    };
+    console.log(formatData);
+    axios
+      .post(`${API_ENDPOINT}/api/comments`, formatData)
+      .then((response) => {
+        if (response.status === 200) {
+          setSubmitBtnStatus({ loading: false, success: true, error: false });
+          getBlogData();
+        } else {
+          setSubmitBtnStatus({ loading: false, success: false, error: true });
+        }
+      })
+      .catch((error) => console.log(error))
+      .finally(() => setTimeout(() => handleReset(), 3000));
+  }
+
+  const handleReset = () => {
+    setFormData({
+      name: "",
+      comment: "",
+      blog: "",
+    });
+    setSubmitBtnStatus({ loading: false, success: false, error: false });
+  };
 
   useEffect(() => {
     getBlogData();
@@ -121,19 +165,33 @@ const Blog = () => {
                     </div>
                     <div className="md:float-right md:w-3/4 p-8 space-y-4">
                       <h2>Comments</h2>
-                      <form action="" className="flex flex-col space-y-4 pb-5">
+                      <form
+                        className="flex flex-col space-y-4 pb-5"
+                        onSubmit={handleCommentSubmit}
+                      >
                         <input
                           type="text"
                           className="p-2 rounded-md"
                           placeholder="your name..."
                           required
+                          name="name"
+                          value={formData.name || ""}
+                          onChange={(e) =>
+                            setFormData({ ...formData, name: e.target.value })
+                          }
                         />
                         <textarea
-                          name=""
-                          id=""
                           className="h-20 p-2 rounded-md"
                           placeholder="your comment..."
                           required
+                          value={formData.comment || ""}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              comment: e.target.value,
+                              blog: [blog.id],
+                            })
+                          }
                         ></textarea>
                         <button type="submit">
                           <OutlineBtn readMode={true} hint="Send">
@@ -148,6 +206,11 @@ const Blog = () => {
                         >
                           <h3 className="font-bold">
                             {comment.attributes.name}
+                            <span className="font-normal text-gray-500 text-xs">
+                              {" "}
+                              -{" "}
+                              {showFormattedDate(comment.attributes.updatedAt)}
+                            </span>
                           </h3>
                           <p>{comment.attributes.comment}</p>
                         </div>
