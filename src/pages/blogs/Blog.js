@@ -98,7 +98,7 @@ const Blog = () => {
                       src={blog.attributes.file1.data.attributes.url}
                       alt={blog.attributes.title}
                     />
-                    <div className="relative pt-10 flex flex-col-reverse md:flex-row gap-8">
+                    <div className="relative pt-5 flex flex-col-reverse md:flex-row md:gap-8">
                       <div className="md:basis-1/4 p-8">
                         <p className="flex gap-2">
                           <Calendar className="w-4 h-4" />
@@ -112,8 +112,21 @@ const Blog = () => {
                       </div>
                       <div className="md:basis-3/4 p-8 space-y-2">
                         <h1 className="text-3xl">{blog.attributes.title}</h1>
-                        <p>{blog.attributes.articles}</p>
+                        <p className="text-justify">
+                          {blog.attributes.articles}
+                        </p>
                       </div>
+                    </div>
+                    <div className="md:float-right md:w-3/4 p-8 space-y-2">
+                      <h2>Comments</h2>
+                      {blog.attributes.comments.data.map((comment, index) => (
+                        <div className="chat-bubble bg-white p-5 rounded-lg">
+                          <h3 className="font-bold">
+                            {comment.attributes.name}
+                          </h3>
+                          <p>{comment.attributes.comment}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 ))
