@@ -9,6 +9,8 @@ import ChatBubble from "../../assets/icons/ChatBubble";
 import AirplaneIcon from "../../assets/icons/AirplaneIcon";
 import BlogHeader from "./BlogHeader";
 import OutlineBtn from "../../shared/OutlineBtn";
+import SuccessIcon from "../../assets/icons/SuccessIcon";
+import FailedIcon from "../../assets/icons/FailedIcon";
 
 const containerVariants = {
   hidden: {
@@ -77,7 +79,7 @@ const Blog = () => {
 
   function handleCommentSubmit(e) {
     e.preventDefault();
-
+    setSubmitBtnStatus({ loading: true, success: false, error: false });
     const formatData = {
       data: {
         name: formData.name,
@@ -85,7 +87,6 @@ const Blog = () => {
         blog: formData.blog,
       },
     };
-    console.log(formatData);
     axios
       .post(`${API_ENDPOINT}/api/comments`, formatData)
       .then((response) => {
@@ -195,7 +196,22 @@ const Blog = () => {
                         ></textarea>
                         <button type="submit">
                           <OutlineBtn readMode={true} hint="Send">
-                            <AirplaneIcon className="w-6 h-6 inline ml-2 -translate-y-1 rotate-45 transition-all group-hover:rotate-90  group-hover:translate-y-0 group-hover:translate-x-1" />
+                            {!submitBtnStatus.loading &&
+                              !submitBtnStatus.success &&
+                              !submitBtnStatus.error && (
+                                <AirplaneIcon className="w-6 h-6 inline ml-2 -translate-y-1 rotate-45 transition-all group-hover:rotate-90  group-hover:translate-y-0 group-hover:translate-x-1" />
+                              )}
+                            {submitBtnStatus.loading && (
+                              <div className="ml-2 bg-blue-800 rounded-full relative inline-flex mr-3 opacity-50">
+                                <span className="animate-ping bg-indigo-900 p-3 rounded-full inline-flex"></span>
+                              </div>
+                            )}
+                            {submitBtnStatus.success && (
+                              <SuccessIcon className="w-6 h-6 inline ml-2 stroke-green-500" />
+                            )}
+                            {submitBtnStatus.error && (
+                              <FailedIcon className="w-6 h-6 inline ml-2 stroke-orange-500" />
+                            )}
                           </OutlineBtn>
                         </button>
                       </form>
