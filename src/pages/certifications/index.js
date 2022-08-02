@@ -10,6 +10,8 @@ import dicodingPWA from "../../assets/images/certifications/dicodingPWA.jpg";
 import dicodingWebExpert from "../../assets/images/certifications/dicodingWebExpert.jpg";
 import dicodingPython from "../../assets/images/certifications/dicodingPython.jpg";
 import dicodingJS from "../../assets/images/certifications/dicodingJS.jpg";
+import dicodingFrontEndPemula from "../../assets/images/certifications/dicodingFrontEndPemula.jpg";
+import dicodingBelajarReact from "../../assets/images/certifications/dicodingBelajarReact.jpg";
 import internshipRentrips from "../../assets/images/certifications/internshipRentrips.jpg";
 
 const containerVariants = {
@@ -96,6 +98,16 @@ const certifications = [
     name: "Javascript - Dicoding Academy",
     year: "May 2021",
     img: dicodingJS,
+  },
+  {
+    name: "Frontend Pemula - Dicoding Academy",
+    year: "Jun 2022",
+    img: dicodingFrontEndPemula,
+  },
+  {
+    name: "Belajar React - Dicoding Academy",
+    year: "Jul 2022",
+    img: dicodingBelajarReact,
   },
 ];
 
