@@ -3,7 +3,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { showFormattedDate, countComments } from "../../utils";
+import { showFormattedDate, countComments, setLocalStorage } from "../../utils";
 import Calendar from "../../assets/icons/Calendar";
 import ChatBubble from "../../assets/icons/ChatBubble";
 import AirplaneIcon from "../../assets/icons/AirplaneIcon";
@@ -93,6 +93,7 @@ const Blog = () => {
         if (response.status === 200) {
           setSubmitBtnStatus({ loading: false, success: true, error: false });
           getBlogData();
+          setLocalStorage(formData.name);
         } else {
           setSubmitBtnStatus({ loading: false, success: false, error: true });
         }

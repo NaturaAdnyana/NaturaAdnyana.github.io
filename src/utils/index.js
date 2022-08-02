@@ -11,3 +11,8 @@ export const showFormattedDate = (date) => {
 export const countComments = (comments) => {
   return comments.length;
 };
+
+export const setLocalStorage = (name) => {
+  const CACHE_KEY = "USERNAME";
+  localStorage.setItem(CACHE_KEY, name);
+};

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { setLocalStorage } from "../../utils";
 import OutlineBtn from "../../shared/OutlineBtn";
 import AirplaneIcon from "../../assets/icons/AirplaneIcon";
 import SuccessIcon from "../../assets/icons/SuccessIcon";
@@ -33,11 +34,6 @@ const ContactMeForm = () => {
       })
       .catch((error) => console.log(error))
       .finally(() => setTimeout(() => handleReset(), 3000));
-  };
-
-  const setLocalStorage = (name) => {
-    const CACHE_KEY = "USERNAME";
-    localStorage.setItem(CACHE_KEY, name);
   };
 
   const handleReset = () => {

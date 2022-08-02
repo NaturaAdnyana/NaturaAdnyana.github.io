@@ -88,7 +88,10 @@ function App() {
           </footer>
           <AnimatePresence>
             {popUps && (
-              <InWebNotification message={`Welcome back ${username} 👋`} />
+              <InWebNotification
+                className="z-20"
+                message={`Welcome back ${username} 👋`}
+              />
             )}
           </AnimatePresence>
         </Suspense>
