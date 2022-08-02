@@ -85,7 +85,7 @@ function Navbar(props) {
             className={({ isActive }) => {
               return isActive
                 ? "font-bold hover:opacity-50 transition-opacity"
-                : "hover:opacity-50 transition-opacity";
+                : "opacity-60 hover:opacity-100 transition-opacity";
             }}
             to="/"
           >
@@ -97,7 +97,7 @@ function Navbar(props) {
             className={({ isActive }) => {
               return isActive
                 ? "font-bold hover:opacity-50 transition-opacity"
-                : "hover:opacity-50 transition-opacity";
+                : "opacity-60 hover:opacity-100 transition-opacity";
             }}
             to="/works"
           >
@@ -109,7 +109,7 @@ function Navbar(props) {
             className={({ isActive }) => {
               return isActive
                 ? "font-bold hover:opacity-50 transition-opacity"
-                : "hover:opacity-50 transition-opacity";
+                : "opacity-60 hover:opacity-100 transition-opacity";
             }}
             to="/blogs"
           >
@@ -121,7 +121,7 @@ function Navbar(props) {
             className={({ isActive }) => {
               return isActive
                 ? "font-bold hover:opacity-50 transition-opacity"
-                : "hover:opacity-50 transition-opacity";
+                : "opacity-60 hover:opacity-100 transition-opacity";
             }}
             to="/certifications"
           >
@@ -133,7 +133,7 @@ function Navbar(props) {
             className={({ isActive }) => {
               return isActive
                 ? "font-bold hover:opacity-50 transition-opacity"
-                : "hover:opacity-50 transition-opacity";
+                : "opacity-60 hover:opacity-100 transition-opacity";
             }}
             to="/contact"
           >
