@@ -10,6 +10,7 @@ import AirplaneIcon from "../../assets/icons/AirplaneIcon";
 import OutlineBtn from "../../shared/OutlineBtn";
 import SuccessIcon from "../../assets/icons/SuccessIcon";
 import FailedIcon from "../../assets/icons/FailedIcon";
+import ReactMarkdown from "react-markdown";
 
 const containerVariants = {
   hidden: {
@@ -156,9 +157,9 @@ const Blog = () => {
                       </div>
                       <div className="md:basis-3/4 p-8 space-y-2">
                         <h1 className="text-3xl">{blog.attributes.title}</h1>
-                        <p className="text-justify">
+                        <ReactMarkdown className="text-justify">
                           {blog.attributes.articles}
-                        </p>
+                        </ReactMarkdown>
                       </div>
                     </div>
                     <div className="md:float-right md:w-3/4 p-8 space-y-4">
