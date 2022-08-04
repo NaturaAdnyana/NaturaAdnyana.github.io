@@ -6,6 +6,7 @@ import axios from "axios";
 import BlogCard from "./BlogCard.js";
 import BlogHeader from "./BlogHeader.js";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/icons/Logo.jsx";
 
 const containerVariants = {
   hidden: {
@@ -92,7 +93,10 @@ const Blogs = () => {
             </article>
             <article className="pt-10 pb-20 lg:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {!allBlogs ? (
-                <div>Loading...</div>
+                <div className="md:col-span-2 lg:col-span-3 flex flex-col justify-center items-center animate-pulse space-y-2">
+                  <Logo className="w-10 h-10 animate-spin" isReadMode={true} />
+                  <span className="text-sm">Loading...</span>
+                </div>
               ) : (
                 allBlogs.data.map((blog, index) => (
                   <Link
