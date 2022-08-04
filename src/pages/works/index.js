@@ -349,7 +349,6 @@ const Works = () => {
                       );
                     }
                   )}
-                  ;
                 </div>
               </div>
             </article>
