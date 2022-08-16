@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import GithubIcon from "../../assets/icons/GithubIcon";
 import GlobeIcon from "../../assets/icons/GlobeIcon";
 import baliWaffle from "../../assets/images/works/baliWaffle.jpg";
@@ -174,7 +174,7 @@ const Works = () => {
     setDeviceWidth(window.innerWidth);
   };
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Works - Natura Adnyana</title>
         <meta
@@ -355,7 +355,7 @@ const Works = () => {
           </section>
         </motion.div>
       </motion.div>
-    </HelmetProvider>
+    </>
   );
 };
 

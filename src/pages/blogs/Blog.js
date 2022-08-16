@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -119,7 +119,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>{blogHelmet.title} - Natura Adnyana</title>
       </Helmet>
@@ -237,7 +237,7 @@ const Blog = () => {
           </section>
         </motion.div>
       </motion.div>
-    </HelmetProvider>
+    </>
   );
 };
 

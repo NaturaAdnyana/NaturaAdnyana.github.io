@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import posIndo from "../../assets/images/certifications/posIndo.jpg";
 import BNSPJuniorProgrammer from "../../assets/images/certifications/BNSPJuniorProgrammer.jpg";
 import BDI3DLayout from "../../assets/images/certifications/BDI3DLayout.jpg";
@@ -115,7 +115,7 @@ const Certifications = () => {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1.2]);
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Certifications - Natura Adnyana</title>
         <meta
@@ -179,7 +179,7 @@ const Certifications = () => {
           </section>
         </motion.div>
       </motion.div>
-    </HelmetProvider>
+    </>
   );
 };
 

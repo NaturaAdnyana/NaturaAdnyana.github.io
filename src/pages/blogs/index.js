@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import ReadModeIntro from "./ReadModeIntro.js";
 import axios from "axios";
 import BlogCard from "./BlogCard.js";
@@ -70,7 +70,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Blogs - Natura Adnyana</title>
         <meta
@@ -112,7 +112,7 @@ const Blogs = () => {
           </section>
         </motion.div>
       </motion.div>
-    </HelmetProvider>
+    </>
   );
 };
 

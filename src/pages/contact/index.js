@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import MailIcon from "../../assets/icons/MailIcon";
 import GithubIcon from "../../assets/icons/GithubIcon";
 import InstagramIcon from "../../assets/icons/InstagramIcon";
@@ -45,7 +45,7 @@ const contentVariants = {
 
 function Contact() {
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Contact - Natura Adnyana</title>
         <meta
@@ -173,7 +173,7 @@ function Contact() {
           </section>
         </motion.div>
       </motion.div>
-    </HelmetProvider>
+    </>
   );
 }
 
