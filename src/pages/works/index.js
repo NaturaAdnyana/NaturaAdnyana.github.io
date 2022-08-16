@@ -221,7 +221,7 @@ const Works = () => {
                     ({ id, name, year, url, github, techs, img, smallImg }) => {
                       return id === 1 ? (
                         <motion.div
-                          key={name}
+                          key={id}
                           className="group md:col-span-2 lg:col-span-3 relative rounded-md overflow-hidden transition-all border"
                           initial={{ opacity: 0 }}
                           whileInView={{ opacity: 1 }}
@@ -234,6 +234,7 @@ const Works = () => {
                                 {techs.map((tech) => {
                                   return (
                                     <div
+                                      key={tech}
                                       className={`px-2 py-1 mr-2 mt-2 border ${techColor(
                                         tech
                                       )} rounded-lg`}
@@ -255,6 +256,7 @@ const Works = () => {
                                 {techs.map((tech) => {
                                   return (
                                     <div
+                                      key={tech}
                                       className={`px-2 py-1 mr-2 mt-2 border ${techColor(
                                         tech
                                       )} rounded-lg`}
@@ -306,6 +308,7 @@ const Works = () => {
                               {techs.map((tech) => {
                                 return (
                                   <div
+                                    key={tech}
                                     className={`px-2 py-1 mr-2 mt-2 border ${techColor(
                                       tech
                                     )} rounded-lg`}
