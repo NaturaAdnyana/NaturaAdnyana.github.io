@@ -57,6 +57,17 @@ function App() {
           name="description"
           content="Natura Adnyana Personal Website. Check at Natura's Works, Blogs, and Certifications here."
         ></meta>
+        <meta property="og:title" content="Natura Adnyana - Personal Website" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://cdn.jsdelivr.net/gh/NaturaAdnyana/NaturaAdnyana.github.io/src/assets/images/2022me.webp"
+        />
+        <meta
+          property="og:description"
+          content="Front-end Web Developer | Graphic Designer | Aspiring Software Engineer"
+        />
+        <meta property="og:url" content="https://www.naturaadnyana.com" />
       </Helmet>
       <div className="App">
         <Suspense fallback={<LoadingPage />}>
