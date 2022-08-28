@@ -157,7 +157,7 @@ const Blog = () => {
                       </div>
                       <div className="md:basis-3/4 p-8 space-y-2">
                         <h1 className="text-3xl">{blog.attributes.title}</h1>
-                        <ReactMarkdown className="text-justify">
+                        <ReactMarkdown className="markdown-format text-justify space-y-5">
                           {blog.attributes.articles}
                         </ReactMarkdown>
                       </div>
@@ -215,7 +215,7 @@ const Blog = () => {
                       </form>
                       {blog.attributes.comments.data.map((comment, index) => (
                         <div
-                          className="chat-bubble bg-white p-5 rounded-lg"
+                          className="chat-bubble bg-white p-5 rounded-lg space-y-2"
                           key={index}
                         >
                           <h3 className="font-bold">
@@ -226,7 +226,9 @@ const Blog = () => {
                               {showFormattedDate(comment.attributes.updatedAt)}
                             </span>
                           </h3>
-                          <p>{comment.attributes.comment}</p>
+                          <ReactMarkdown>
+                            {comment.attributes.comment}
+                          </ReactMarkdown>
                         </div>
                       ))}
                     </div>

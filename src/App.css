@@ -314,3 +314,11 @@ body {
   border-color: rgb(255, 255, 255) transparent transparent transparent;
   z-index: -1;
 }
+
+.markdown-format ul {
+  list-style: disc inside;
+}
+
+.markdown-format ol {
+  list-style: decimal inside;
+}
