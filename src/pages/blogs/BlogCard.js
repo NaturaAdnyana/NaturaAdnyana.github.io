@@ -19,7 +19,7 @@ const BlogCard = ({ blog }) => {
       <div className="w-full p-4 bg-white absolute bottom-0 space-y-3  text-center">
         <h3 className="font-xl font-bold">{blog.attributes.title}</h3>
         <h4 className="text-xs">
-          {showFormattedDate(blog.attributes.updatedAt)} -{" "}
+          {showFormattedDate(blog.attributes.createdAt)} -{" "}
           {countComments(blog.attributes.comments.data)} Comments
         </h4>
       </div>

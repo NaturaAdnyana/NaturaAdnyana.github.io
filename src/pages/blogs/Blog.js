@@ -147,7 +147,7 @@ const Blog = () => {
                       <div className="md:basis-1/4 p-8">
                         <div className="flex gap-2">
                           <Calendar className="w-4 h-4" />
-                          {showFormattedDate(blog.attributes.updatedAt)}
+                          {showFormattedDate(blog.attributes.createdAt)}
                         </div>
                         <div className="flex gap-2">
                           <ChatBubble className="w-4 h-4" />
