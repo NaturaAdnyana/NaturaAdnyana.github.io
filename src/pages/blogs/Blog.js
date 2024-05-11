@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { checkTargetForNewValues, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 // import axios from "axios";
 // import { showFormattedDate, countComments, setLocalStorage } from "../../utils";
@@ -81,22 +81,21 @@ const Blog = () => {
     //   console.log(err);
     // }
     const foundBlog = BlogList.blogs.find((blog) => blog.slug === slug);
-    console.log(foundBlog);
     if (foundBlog) {
       // Import the Markdown file directly
-      const text = import(`../../assets/data/blogs/${foundBlog.text}`).then(
-        (res) => {
-          fetch(res.default)
-            .then((res) => res.text())
-            .then((text) => {
-              console.log(text);
-              setBlog({ ...foundBlog, text });
-              console.log(blog);
-            })
-            .catch((err) => console.log(err));
-        }
-      );
-      text();
+      import(`../../assets/data/blogs/${foundBlog.text}`).then((res) => {
+        fetch(res.default)
+          .then((res) => res.text())
+          .then((text) => {
+            setBlog({ ...foundBlog, text });
+          })
+          .then(() => {
+            setBlogHelmet({
+              title: blog.title,
+            });
+          })
+          .catch((err) => console.log(err));
+      });
     } else {
       console.error("Blog not found with the specified slug");
     }

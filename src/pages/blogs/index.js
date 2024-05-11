@@ -65,7 +65,6 @@ const Blogs = () => {
   }
 
   useEffect(() => {
-    console.log(allBlogs);
     setTimeout(() => {
       setIsIntro(false);
     }, 3000);
@@ -103,14 +102,15 @@ const Blogs = () => {
                 </div>
               ) : (
                 allBlogs.blogs.map((blog, index) => (
-                  <Link
-                    // to={`/blogs/${blog.attributes.slug}`}
-                    to={`/blogs/${blog.slug}`}
-                    className="group"
-                    key={index}
-                  >
-                    <BlogCard blog={blog} />
-                  </Link>
+                  <motion.div variants={contentVariants} key="index">
+                    <Link
+                      // to={`/blogs/${blog.attributes.slug}`}
+                      to={`/blogs/${blog.slug}`}
+                      className="group"
+                    >
+                      <BlogCard blog={blog} />
+                    </Link>
+                  </motion.div>
                 ))
               )}
             </article>
