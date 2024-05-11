@@ -50,9 +50,6 @@ const contentVariants = {
 
 const Blog = () => {
   const [blog, setBlog] = useState("");
-  const [blogHelmet, setBlogHelmet] = useState({
-    title: "Blog",
-  });
   // const [formData, setFormData] = useState({
   //   name: "",
   //   comment: "",
@@ -88,11 +85,6 @@ const Blog = () => {
           .then((res) => res.text())
           .then((text) => {
             setBlog({ ...foundBlog, text });
-          })
-          .then(() => {
-            setBlogHelmet({
-              title: blog.title,
-            });
           })
           .catch((err) => console.log(err));
       });
@@ -144,7 +136,7 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>{blogHelmet.title} - Natura Adnyana</title>
+        <title>{blog.title ? blog.title : "Blog"} - Natura Adnyana</title>
       </Helmet>
       <motion.div
         className="overflow-x-hidden"
@@ -162,12 +154,15 @@ const Blog = () => {
                 // blog.data.map((blog, index) => (
                 // <div key={index}>
                 <div>
-                  <img
+                  <motion.img
                     className="w-full max-h-64 object-cover object-center"
                     // src={blog.attributes.file1.data.attributes.url}
                     // alt={blog.attributes.title}
                     src={blog.image}
                     alt={blog.title}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.5, duration: 1 }}
                   />
                   <div className="pt-5 flex flex-col-reverse md:flex-row md:gap-8">
                     <div className="md:basis-1/4 p-8">
