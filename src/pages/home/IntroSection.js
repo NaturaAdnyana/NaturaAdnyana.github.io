@@ -57,23 +57,24 @@ function IntroSection() {
                 <div className="bg-blue-500 rounded-full relative inline-flex mr-3 opacity-50">
                   <span className="animate-ping bg-indigo-900 p-2 rounded-full inline-flex"></span>
                 </div>
-                Introduce me - "Natura Adnyana"
+                Introduce me - Natura Adnyana
               </h3>
             )}
             <p className="mt-4">
-              So you can call me <i>Natura</i> or <i>Natsura</i> (people call me
-              like that). It sounds like a Japanese name, right? Well, I'm
-              actually half Japanese-Indonesian, born in Nara, Japan on 9 August
-              2001 (now I'm {age} years old), and now live on the beautiful
+              Hi, I'm Spiderman (not really or maybe yes?). Kidding, I'm Natura.
+              I'm half Japanese-Indonesian, born in Nara, Japan on 9 August 2001
+              (so now I'm {age}y.o), and currently living on the beautiful
               island called Bali.
             </p>
             <p>
-              I'm a web developer and also a student at INSTIKI Indonesia
-              University. I love technology since I'm 13 years old, starting
-              from when I was trying to disassemble my new phone, fixing my
-              cheap electronic gadgets, cracking software, and now I'm trying to
-              make a website. My goal is to be a Software Engineer. It's still a
-              long journey, so let's see what will happen next.😉
+              I have recently dedicated my time to becoming a software engineer.
+              I realize that with this simple technology, citizens can be
+              assisted with various issues (especially effectiveness & time).
+              Also, I am aware that current technology is rapidly and
+              explosively advancing (AI and Web 3), which will make this world
+              instantaneously driven. So, my goal is to help citizens to address
+              existing problems, so that a system can determine citizens, rather
+              than citizens managing the system.
             </p>
           </div>
         </motion.article>

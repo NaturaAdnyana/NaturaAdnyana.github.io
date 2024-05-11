@@ -19,36 +19,32 @@ function InterestSection() {
               "Everything is about Art & Passion"
             </h3>
             <p>
-              I can't say that I'm an artistic person, but I love art so much! I
-              love to do the painting when I was a kid. I also had an interest
-              in popup book arts that were made by Robert Sabuda, he inspired me
-              to always think creatively.
+              Yup, our lives are never consistent. Nowadays, we get info from
+              everywhere instantly, stuff we never even thought about before. I
+              believe that in the current era, specialists will decrease while
+              generalists will increase. Especially in the world of technology,
+              there's always something new popping up. It started with desktop
+              apps, then websites, then mobile apps, WEB 3, AI, and so on. This
+              makes it hard for us to become a "master" in one thing because we
+              are constantly forced to shift to the latest technology, which
+              always claims to be "more optimal" than the previous one. Whether
+              we like it or not, we have to be adaptive.
             </p>
             <p>
-              I like sports also, especially <s>soccer</s> football. My favorite
-              football team is Manchester United, even though now they play
-              sh*t. I also have a dream of playing surf one day. I think surfing
-              is one of many other sports that play with nature, I mean it's
-              amazing if you can predict how the wave moves and how we keep
-              standing over the water. So how cool is that?
+              Of course, this happened to me. I've really felt that change. When
+              I was young, I lived without gadgets, playing with Lego and do
+              paintings, so back then my dream was to become an architect. Then
+              the internet came along, I started watching YouTube, and I found
+              someone named Robert Sabuda, a pop-up book artist, who really
+              inspired me to create extraordinary works. Then mobile games came
+              along, inspiring me to create games. And now, seeing the
+              incredible potential of technology, I decided to enter this
+              industry.
             </p>
             <p>
-              About music taste, Avicii is a legend. His song lyrics make me
-              strong every day. And basically, I love the music with fingerstyle
-              guitar in it. Do you know Peach Pit? I love to listen to his songs
-              for now.
-            </p>
-            <p>
-              And Video Games? Of course, I love it. Skyrim, Minecraft, and GTA
-              have a special place in my heart. But also, for me "The Little
-              Nightmares" and "The Last of Us" have the best story, visuals, and
-              art.
-            </p>
-            <p>
-              Last but not least, I do coding every day, the reason is that{" "}
-              <s>I hate my life</s> it is a promising job & fun to do. Coding
-              teaches me to always be patient, grateful, and consistent, because
-              "technology is never die".
+              So, right now, creativity and technology is my key to
+              participating in innovation for for people around me, to create
+              feelings of comfort, happiness, and satisfaction.
             </p>
           </div>
           <div className="md:h-screen md:basis-1/2 lg:pt-28 lg:pb-24 order-1 md:order-2">
