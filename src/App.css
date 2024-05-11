@@ -316,9 +316,9 @@ body {
 }
 
 .markdown-format ul {
-  list-style: disc inside;
+  list-style: disc outside;
 }
 
 .markdown-format ol {
-  list-style: decimal inside;
+  list-style: decimal outside;
 }

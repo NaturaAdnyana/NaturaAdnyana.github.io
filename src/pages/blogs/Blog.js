@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { checkTargetForNewValues, motion } from "framer-motion";
 import { useParams } from "react-router-dom";
-import axios from "axios";
-import { showFormattedDate, countComments, setLocalStorage } from "../../utils";
+// import axios from "axios";
+// import { showFormattedDate, countComments, setLocalStorage } from "../../utils";
 import Calendar from "../../assets/icons/Calendar";
-import ChatBubble from "../../assets/icons/ChatBubble";
-import AirplaneIcon from "../../assets/icons/AirplaneIcon";
-import OutlineBtn from "../../shared/OutlineBtn";
-import SuccessIcon from "../../assets/icons/SuccessIcon";
-import FailedIcon from "../../assets/icons/FailedIcon";
+// import ChatBubble from "../../assets/icons/ChatBubble";
+// import AirplaneIcon from "../../assets/icons/AirplaneIcon";
+// import OutlineBtn from "../../shared/OutlineBtn";
+// import SuccessIcon from "../../assets/icons/SuccessIcon";
+// import FailedIcon from "../../assets/icons/FailedIcon";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import BlogList from "../../assets/data/blogs/blogs-list.json";
 
 const containerVariants = {
   hidden: {
@@ -51,70 +53,92 @@ const Blog = () => {
   const [blogHelmet, setBlogHelmet] = useState({
     title: "Blog",
   });
-  const [formData, setFormData] = useState({
-    name: "",
-    comment: "",
-    blog: "",
-  });
-  const [submitBtnStatus, setSubmitBtnStatus] = useState({
-    loading: false,
-    success: false,
-    error: false,
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   comment: "",
+  //   blog: "",
+  // });
+  // const [submitBtnStatus, setSubmitBtnStatus] = useState({
+  //   loading: false,
+  //   success: false,
+  //   error: false,
+  // });
   let { id } = useParams();
-  const API_ENDPOINT = process.env.REACT_APP_PERSONAL_API_ENDPOINT;
+  // const API_ENDPOINT = process.env.REACT_APP_PERSONAL_API_ENDPOINT;
 
-  const getBlogData = async () => {
-    try {
-      axios
-        .get(`${API_ENDPOINT}/api/blogs?filters[slug][$eq]=${id}&populate=*`)
-        .then((response) => {
-          setBlog(response.data);
-          setBlogHelmet({
-            title: response.data.data[0].attributes.title,
-          });
-        });
-    } catch (err) {
-      console.log(err);
+  // const getBlogData = async () => {
+  const getBlogData = async (slug) => {
+    // try {
+    // axios
+    //   .get(`${API_ENDPOINT}/api/blogs?filters[slug][$eq]=${id}&populate=*`)
+    //   .then((response) => {
+    //     setBlog(response.data);
+    //     setBlogHelmet({
+    //       title: response.data.data[0].attributes.title,
+    //     });
+    //   });
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    const foundBlog = BlogList.blogs.find((blog) => blog.slug === slug);
+    console.log(foundBlog);
+    if (foundBlog) {
+      // Import the Markdown file directly
+      const text = import(`../../assets/data/blogs/${foundBlog.text}`).then(
+        (res) => {
+          fetch(res.default)
+            .then((res) => res.text())
+            .then((text) => {
+              console.log(text);
+              setBlog({ ...foundBlog, text });
+              console.log(blog);
+            })
+            .catch((err) => console.log(err));
+        }
+      );
+      text();
+    } else {
+      console.error("Blog not found with the specified slug");
     }
   };
 
-  function handleCommentSubmit(e) {
-    e.preventDefault();
-    setSubmitBtnStatus({ loading: true, success: false, error: false });
-    const formatData = {
-      data: {
-        name: formData.name,
-        comment: formData.comment,
-        blog: formData.blog,
-      },
-    };
-    axios
-      .post(`${API_ENDPOINT}/api/comments`, formatData)
-      .then((response) => {
-        if (response.status === 200) {
-          setSubmitBtnStatus({ loading: false, success: true, error: false });
-          getBlogData();
-          setLocalStorage(formData.name);
-        } else {
-          setSubmitBtnStatus({ loading: false, success: false, error: true });
-        }
-      })
-      .catch((error) => console.log(error))
-      .finally(() => setTimeout(() => handleReset(), 3000));
-  }
+  // function handleCommentSubmit(e) {
+  //   e.preventDefault();
+  //   setSubmitBtnStatus({ loading: true, success: false, error: false });
+  //   const formatData = {
+  //     data: {
+  //       name: formData.name,
+  //       comment: formData.comment,
+  //       blog: formData.blog,
+  //     },
+  //   };
+  //   axios
+  //     .post(`${API_ENDPOINT}/api/comments`, formatData)
+  //     .then((response) => {
+  //       if (response.status === 200) {
+  //         setSubmitBtnStatus({ loading: false, success: true, error: false });
+  //         getBlogData();
+  //         setLocalStorage(formData.name);
+  //       } else {
+  //         setSubmitBtnStatus({ loading: false, success: false, error: true });
+  //       }
+  //     })
+  //     .catch((error) => console.log(error))
+  //     .finally(() => setTimeout(() => handleReset(), 3000));
+  // }
 
-  const handleReset = () => {
-    setFormData({
-      name: "",
-      comment: "",
-      blog: "",
-    });
-    setSubmitBtnStatus({ loading: false, success: false, error: false });
-  };
+  // const handleReset = () => {
+  //   setFormData({
+  //     name: "",
+  //     comment: "",
+  //     blog: "",
+  //   });
+  //   setSubmitBtnStatus({ loading: false, success: false, error: false });
+  // };
 
   useEffect(() => {
-    getBlogData();
+    getBlogData(id);
+    // console.log(blog);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -136,33 +160,41 @@ const Blog = () => {
               {!blog ? (
                 <div>Loading</div>
               ) : (
-                blog.data.map((blog, index) => (
-                  <div key={index}>
-                    <img
-                      className="w-full max-h-64 object-cover object-center"
-                      src={blog.attributes.file1.data.attributes.url}
-                      alt={blog.attributes.title}
-                    />
-                    <div className="pt-5 flex flex-col-reverse md:flex-row md:gap-8">
-                      <div className="md:basis-1/4 p-8">
-                        <div className="flex gap-2">
-                          <Calendar className="w-4 h-4" />
-                          {showFormattedDate(blog.attributes.createdAt)}
-                        </div>
-                        <div className="flex gap-2">
+                // blog.data.map((blog, index) => (
+                // <div key={index}>
+                <div>
+                  <img
+                    className="w-full max-h-64 object-cover object-center"
+                    // src={blog.attributes.file1.data.attributes.url}
+                    // alt={blog.attributes.title}
+                    src={blog.image}
+                    alt={blog.title}
+                  />
+                  <div className="pt-5 flex flex-col-reverse md:flex-row md:gap-8">
+                    <div className="md:basis-1/4 p-8">
+                      <div className="flex gap-2">
+                        <Calendar className="w-4 h-4" />
+                        {/* {showFormattedDate(blog.attributes.createdAt)} */}
+                        {blog.date}
+                      </div>
+                      {/* <div className="flex gap-2">
                           <ChatBubble className="w-4 h-4" />
                           {countComments(blog.attributes.comments.data)}{" "}
                           Comments
-                        </div>
-                      </div>
-                      <div className="md:basis-3/4 p-8 space-y-2">
-                        <h1 className="text-3xl">{blog.attributes.title}</h1>
-                        <ReactMarkdown className="markdown-format text-justify space-y-5">
-                          {blog.attributes.articles}
-                        </ReactMarkdown>
-                      </div>
+                        </div> */}
                     </div>
-                    <div className="md:float-right md:w-3/4 p-8 space-y-4">
+                    <div className="md:basis-3/4 p-8 space-y-2">
+                      <h1 className="text-3xl">{blog.title}</h1>
+                      <ReactMarkdown
+                        className="markdown-format text-justify space-y-5"
+                        rehypePlugins={[rehypeRaw]}
+                        children={blog.text}
+                      >
+                        {/* {blog.attributes.articles} */}
+                      </ReactMarkdown>
+                    </div>
+                  </div>
+                  {/* <div className="md:float-right md:w-3/4 p-8 space-y-4">
                       <h2>Comments</h2>
                       <form
                         className="flex flex-col space-y-4 pb-5"
@@ -231,9 +263,9 @@ const Blog = () => {
                           </ReactMarkdown>
                         </div>
                       ))}
-                    </div>
-                  </div>
-                ))
+                    </div> */}
+                </div>
+                // ))
               )}
             </article>
           </section>

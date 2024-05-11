@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import ReadModeIntro from "./ReadModeIntro.js";
-import axios from "axios";
+// import axios from "axios";
 import BlogCard from "./BlogCard.js";
 import BlogHeader from "./BlogHeader.js";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/icons/Logo.jsx";
+import BlogList from "../../assets/data/blogs/blogs-list.json";
 
 const containerVariants = {
   hidden: {
@@ -47,21 +48,24 @@ const Blogs = () => {
   const [allBlogs, setAllBlogs] = useState("");
 
   function getAllBlogs() {
-    axios
-      .get(
-        `${process.env.REACT_APP_PERSONAL_API_ENDPOINT}/api/blogs?populate=*`
-      )
-      .then((response) => response.data)
-      .then((data) => {
-        setAllBlogs(data);
-      })
-      .catch((err) => console.log(err))
-      .finally(() => {
-        console.log(allBlogs);
-      });
+    // axios
+    //   .get(
+    //     `${process.env.REACT_APP_PERSONAL_API_ENDPOINT}/api/blogs?populate=*`
+    //   )
+    //   .then((response) => response.data)
+    //   .then((data) => {
+    //     setAllBlogs(data);
+    //   })
+    //   .catch((err) => console.log(err))
+    //   .finally(() => {
+    //     console.log(allBlogs);
+    //   });
+
+    setAllBlogs(BlogList);
   }
 
   useEffect(() => {
+    console.log(allBlogs);
     setTimeout(() => {
       setIsIntro(false);
     }, 3000);
@@ -98,9 +102,10 @@ const Blogs = () => {
                   <span className="text-sm">Loading...</span>
                 </div>
               ) : (
-                allBlogs.data.map((blog, index) => (
+                allBlogs.blogs.map((blog, index) => (
                   <Link
-                    to={`/blogs/${blog.attributes.slug}`}
+                    // to={`/blogs/${blog.attributes.slug}`}
+                    to={`/blogs/${blog.slug}`}
                     className="group"
                     key={index}
                   >
