@@ -16,7 +16,7 @@ const BlogCard = ({ blog }) => {
         src={blog.thumb}
         // alt={blog.attributes.title}
         alt={blog.title}
-        className="transition-transform"
+        className="transition-transform object-cover w-full h-full"
       />
       <div className="w-full p-4 bg-white absolute bottom-0 space-y-3  text-center">
         {/* <h3 className="font-xl font-bold">{blog.attributes.title}</h3> */}

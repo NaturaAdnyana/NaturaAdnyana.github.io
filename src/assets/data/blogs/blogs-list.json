@@ -4,10 +4,19 @@
       "id": "1",
       "title": "#20y.o Recap",
       "slug": "my-20",
-      "thumb": "https://res.cloudinary.com/naturaadnyana-com/image/upload/v1664527283/small_keagan_henman_IE_Ep_Znx_Oo_JI_unsplash_cd8a1636f7.jpg",
-      "image": "https://res.cloudinary.com/naturaadnyana-com/image/upload/v1664527282/large_keagan_henman_IE_Ep_Znx_Oo_JI_unsplash_cd8a1636f7.jpg",
+      "thumb": "https://res.cloudinary.com/naturaadnyana-com/image/upload/v1660047913/small_rotate_f30f07f407.jpg",
+      "image": "https://res.cloudinary.com/naturaadnyana-com/image/upload/v1660047912/large_rotate_f30f07f407.jpg",
       "date": "1 September 2022",
       "text": "1.md"
+    },
+    {
+      "id": "2",
+      "title": "Introspeksi Diri",
+      "slug": "introspeksi-diri",
+      "thumb": "https://res.cloudinary.com/naturaadnyana-com/image/upload/v1664527283/small_keagan_henman_IE_Ep_Znx_Oo_JI_unsplash_cd8a1636f7.jpg",
+      "image": "https://res.cloudinary.com/naturaadnyana-com/image/upload/v1664527282/large_keagan_henman_IE_Ep_Znx_Oo_JI_unsplash_cd8a1636f7.jpg",
+      "date": "1 January 2024",
+      "text": "2.md"
     }
   ]
 }
