@@ -96,7 +96,7 @@ function HeaderSection(props) {
               />
             </div>
             <div className="basis-1/2 flex md:justify-center items-center flex-col h-screen space-y-6 z-10">
-              <h1 className="text-center text-shadow">
+              <h1 className="text-left text-shadow">
                 <span className="text-6xl lg:text-10xl">HI, </span>
                 <span className="text-5xl lg:text-8xl">IT'S ME</span>
                 <br />
