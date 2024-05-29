@@ -73,7 +73,7 @@ function Contact() {
                 </div>
                 <div className="flex justify-center items-center space-x-2 md:space-x-5">
                   <a
-                    href="mailto:me@naturaadnyana.com?subject=Let's%20Collaborate&body=Hi, Let's%20make%20an%20outstanding%20project%20together%21"
+                    href="mailto:me@natsura.my.id?subject=Let's%20Collaborate&body=Hi, Let's%20make%20an%20outstanding%20project%20together%21"
                     rel="noreferrer noopener"
                     target="_blank"
                   >
@@ -125,7 +125,7 @@ function Contact() {
                     </motion.div>
                   </a>
                   <a
-                    href="https://twitter.com/Natkun_"
+                    href="https://x.com/inoue_natsura"
                     rel="noreferrer noopener"
                     target="_blank"
                   >

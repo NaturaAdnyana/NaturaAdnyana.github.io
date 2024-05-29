@@ -47,7 +47,7 @@ function App() {
     <HelmetProvider>
       <Helmet>
         <title>Natura Adnyana - Personal Website</title>
-        <link rel="canonical" href="https://www.naturaadnyana.com/" />
+        <link rel="canonical" href="https://www.natsura.my.id/" />
         <meta name="author" content="Natura Adnyana"></meta>
         <meta
           name="keywords"

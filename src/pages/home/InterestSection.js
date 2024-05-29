@@ -54,7 +54,7 @@ function InterestSection() {
               </span>
               <br />
               <span className="tracking-widest">
-                Life is f**king inconsistent, right?
+                Life is inconsistent, right?
               </span>
             </h2>
           </div>

@@ -27,8 +27,8 @@ const IllustratorIcon = React.lazy(() =>
 );
 
 const skills = [
-  { name: "HTML5", isFav: true, icon: <HtmlIcon className="w-full" /> },
-  { name: "CSS3", isFav: true, icon: <CssIcon className="w-full" /> },
+  { name: "HTML5", isFav: false, icon: <HtmlIcon className="w-full" /> },
+  { name: "CSS3", isFav: false, icon: <CssIcon className="w-full" /> },
   { name: "Javascript", isFav: true, icon: <JsIcon className="w-full" /> },
   { name: "PHP", isFav: false, icon: <PhpIcon className="w-full" /> },
   { name: "SASS", isFav: false, icon: <SassIcon className="w-full" /> },
@@ -56,7 +56,7 @@ function SkillsToolsSection() {
   return (
     <>
       <section className="text-white bg-shadow py-10 md:pt-24 md:pb-14">
-        <article className="md:pr-16 container mx-auto md:w-11/12 px-6">
+        <article className="md:pr-16 container mx-auto md:w-9/12 px-6">
           <motion.div
             className="pt-2 pb-10 md:pb-5"
             initial={{ opacity: 0 }}

@@ -21,7 +21,7 @@ h2 span,
 body {
   margin: 0;
   padding: 0;
-  background: url("./assets/images/noise11.webp");
+  background: url("./assets/images/noise.webp");
   background-color: black;
   animation: animate 0.5s steps(10) infinite;
 }
